@@ -1,0 +1,60 @@
+main idea: this course is 3/4 about tools and only 1/4 about js. or may be it's just theoretical part. the other idea of such cources - you should study all this tools BEFORE the course. they just do not have time to teach you all the basics.
+
+--intro & marketing--
+lecture 0. logistics
+lecture 1. what is a startup?
+lecture 5. marketing
+
+--linux--
+done lecture 2. start
+---> lecture 3. linux, node.js
+---> lecture 4a. linux command line
+---> lecture 4b. screen (?), emacs and git
+
+--other--
+lecture 6. html/css/js
+lecture 7. deployment (?)
+lecture 8. mobile
+
+
+quizzes
+----------
+
+--tools--
+done HW1 Quiz: Github, Heroku, and AWS
+---> HW3 Quiz: Linux, Command Line, Dev Environment, Git
+---> HW5 Quiz: Git
+
+--web--
+HW2 Quiz: SSJS Interactive Tutorial
+HW5 Quiz: HTML
+HW5 Quiz: CSS
+HW7 Programming/Quiz: Interactive Intro to SSJS, ORMs, DBs
+
+--other--
+HW4 Quiz: Market Research
+
+
+programming assignments
+-------------------------
+
+HW1 Programming Assignment: Basic SSJS with node.js
+HW3 Programming Assignment: Your First Crowdfunding Site
+HW4 Programming Assignment: Styling and Populating Your Crowdfunding SiteHW6 Programming Assignment: Deployment, Social, Analytics, Payments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

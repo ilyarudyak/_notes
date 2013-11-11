@@ -1,0 +1,22 @@
+1) three ways to customize emacs: 1) custom 2) options menu - just a backdoor to custom 3) ~/.emacs file
+  - in any case .emacs is modified; when using options to save options    for future use 'save options'
+
+2) M-x custom and then just use mause to change smt (themes for example) 
+
+3) .el seems to be a file extension for lisp; and .emacs.el and .emacs are the same file; packages for emacs have this .el extension
+
+4) typical lisp command looks like (function arguments)
+
+5) *main idea* - just use examples to config your file if you are not a seasoned lisp programmer
+
+package management
+---------------------
+
+0) add package manager to .emacs ( ELPA (aka package.el) http://melpa.milkbox.net/packages/ - one of the largest)
+1) M-x list-packages
+2) there is the status column in the list and there a few status types: available, installed, built-n etc.
+3) packages are installed in ~/.emacs.d/elpa 
+
+question: do we have add something to .emacs after installing a package? 
+
+answer: it seems yes - nothing works without additional configuration. 

@@ -1,0 +1,63 @@
+chapter1
+--------------
+1) \d - digit; \D - non-digit;
+2) [0-9] - 012...9; [0123] - 0123;
+3) . - any character (not *)
+4) {n} - repeat n times; example: \d{3} - repeat \d 3 times
+5) ? - 0,1 (no character or 1 character); + - 1+ (1 or more characters); * - 0+ (when it can be useful?)
+
+chapter2
+--------------
+
+1) matching digits a) \d b) [0-9] c) [123]; class is more flexible, use it when can't use \d;
+2) matching non-digits a) \D b) [^0-9] or [^\d];
+3) matching word characters (not words) \w (the same as [a-zA-Z0-9]; difference between \w and \D in special symbols)
+4) matching non-word characters \W 
+5) matching whitespace \s (=[ \t\n\r]) and \S - it's companero
+
+**
+* \d and \D; \w and \W - they are like 1-complements (companero)
+* in fact \D = [^\d] and vise versa
+**  
+
+
+chapter3
+--------------
+
+1) ^ and $ - anchors; start and end of the line;
+2) \b - start or end of a word; \B - inside a word;
+
+example:
+e in the beginning of line: ^e
+e at the end of line: e$
+e as first letter of a word: \be
+e as a last letter of a word: e\b
+e inside or last (but not first): \Be
+e first or inside (but not last) e\B
+e inside \Be\B
+
+example:
+the as as standalone word: \bthe\b
+
+3) use special characters as literals: use \Q$\E or [$]
+
+chapter4
+--------------
+
+1) matching the, The, THE: a) (the|The|THE) b) (?i)the - (?i) is an option
+2) we may also write (t|T)h(e|eir) or [tT]h[eir]* - subpatterns (?)
+3) if you use (pattern) you can then reference match with $1 or \1 (?); groups can also be referenced by name;
+4)  
+
+
+
+
+
+
+
+
+
+
+
+
+ 

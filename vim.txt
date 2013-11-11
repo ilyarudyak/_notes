@@ -1,0 +1,11 @@
+color themes
+-------------
+
+1) it seems now we don't have any problem in terminal with solarized; it *now uses 256*, not just 8 colors; it's enough for solarized [http://stackoverflow.com/questions/5892547/what-are-the-advantages-of-macvim-over-vim]
+2) 
+
+which vim to use?
+------------------
+
+1) both - depends on the environment; and now mac os has the recent version of vim;
+2) it's better to use *vim way*; but it's ok to start from mac way; 

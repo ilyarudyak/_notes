@@ -1,0 +1,84 @@
+most interesting videos:
+- 4 lists, 9 local binding
+
+conditionals
+---------------
+
+1) #t #f ; symbols for true and false
+2) if e1 e2 e3 ; no then/else, no ()
+3) if e ; e evaluated to false only for #f, everything else (including null) is true - this special for *dynamically* typing languages; in statically typing language you have to put only boolean type there
+
+let/let*/letrec (9)
+-------------------
+
+1) let (NOT like in ML) - environment before let expression;
+2) let* (like in ML) - all previous bindings
+3) letrec - previous and next; dangerous - use only for mutual recursion 
+
+top level binding (10)
+--------------------
+
+1) don't define recursive functions in REPL
+2) major difference from ML - you can refer to *later* bindings; but only in function definition;
+
+set! (11)
+-------
+
+1) it's possible to change variable in racket but it's not recommended;
+2) is it like global in other languages? i mean when we are changing a variable which is set at top level;
+
+pairs (12)
+-------
+
+1) pairs in racket are slightly confusing and he is *not* recommend them to use
+2) pair (cons 1 2) list (cons 1 (cons 2 null))
+3) there are functions pair? and list? to check them
+4) pair '(1 . 2) list '(1 2)
+5) result of cdr is different for the last item - 2 for pair and '(2) for list
+
+macros (20)
+--------
+
+1) better not to use if not sure; be very careful
+2) example (my-if e1 then e2 else e3) is an equivalent to (if e1 e2 e3)
+3) they evaluated before everything else (like in java)
+
+thunks
+----------
+
+1) when you define a function it's evaluated ONLY when it's called;
+
+   in case of if we evaluate only *one* of two expressions (depends on condition); in other words if e1 e2 e3; suppose e1=#t - we evaluate only e2 but not e3;
+
+2) the idea - to *delay* evaluation of an expression put it into 0-argument function; it will not be evaluated until it's called;
+
+3) it's useful when you have one if but it's not clear when there are a few ifs; the idea - when we need a call we do it AND store the result; so if we need more than one call we use it (not recompute it); so called lazy computation;
+
+streams (17-18)
+-----------------
+
+1) stream is a thunk; when it's called it produces a pair '(next-answer .next thunk);
+
+2) to get first answer: (car (s)) - you call s, then take first element of the pair and it's your answer. he shows a good example of a stream - powers of 2;
+
+3) how to define a stream? using recursion. simplest case: 
+   
+   (define ones (lambda () (cons 1 ones)))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

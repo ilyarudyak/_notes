@@ -1,0 +1,34 @@
+history
+--------------
+Three ways to work with history: 1) fc 2) ! 3) ReadLine Library.
+
+1) fc - main features: a)it's possible to edit a command before execution b) it's possible to list commands based on their number OR name 
+
+  - fc -l # list 16 last commands
+  - fc -l -10 # list 10 last commands; there are other commands with numbers
+  - fc -l git # all commands starting from last git  
+
+  - fc 527 # open vim to edit the 527 command; it will be executed when vim is closed
+
+  - fc -s 527 # execute 527 command w/o openning vim; it's possible to use !527 instead
+
+correct a command
+------------------
+  
+  - ^w # to delete a word
+  - ^u # to delete entire line
+  - ^c # to interrupt a program
+
+
+
+
+
+
+
+
+
+
+
+
+
+m

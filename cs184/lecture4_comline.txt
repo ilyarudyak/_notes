@@ -1,0 +1,88 @@
+1) new insight - use unix tools in your daily life; they very powerful and robust; sobell is a right book; but there are others; 
+
+    - no way to finish learn unix in two weeks;
+
+cp, mv etc.
+---------------
+
+2) the main option cp and mv have -i: ask for permission when overwrite a file (both of them work in a unix way cp file1 file2); they ask only when there is a problem (in contrast with rm; he even recommend making an alias cp='cp -i';
+
+**difference between cp amd mv**
+cp has -r option but mv has not; so mv just moves directories but cp does not without this option;
+
+** diff between cp, mv and rm**
+a) when we use -i option rm always ask but cp,mv only when they overwrite a file
+b) rm has -f option but others do not
+
+3) mkdir -p dir1/dir11 when dir 1 does not exist
+
+links
+----------------
+
+4) we can update link to point it to another file: ln -sf data2.txt latest.txt
+
+key combinations
+------------------
+
+5) useful key combinations on prompt (Alt set as Meta in preferences):
+
+    Alt + F: Move cursor forward one word on the current line
+    Alt + B: Move cursor backward one word on the current line 
+
+    Ctrl + A: Go to the beginning of the current line 
+    Ctrl + E: Go to the end of the current line
+
+basic text
+-------------
+
+6) when using cat "-" is the stdin; example: ls | cat file1 - prints file1 and than ls command.
+
+7) cat is an industrial strength editor - use it, not ms word; new insigth;
+
+7a) head - prints first 10 lines; head -n 50 - first 50
+
+7b) nl - numbering lines 9but with tab?); another approah to count lines (nl file | tail -1)
+
+
+intermediate text
+---------------------
+
+8) grep
+
+    - to find a word in a file: grep word file (example: grep protein *ptt | wc -l)    
+    - it seems uniq works only on sorted output
+    - to find a file contains a word: grep -l word file1 ...
+    - to print 5 lines before or after match: grep -A 5 -B 5 pattern file9) sed
+
+    - to change pattern1 to pattern2 in a file: grep 's/p1/p2/' (to do it globally '.../g'; actually change file -i)
+    - to change file in place: -i (some problems on mac) 
+
+wget
+----------
+
+10) it's very powerful tool - he gives an example how to recursively download an entire site;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+  

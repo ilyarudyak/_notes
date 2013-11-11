@@ -1,0 +1,28 @@
+there are 3 main operations: 1) generating keys 2) connect and disconnect3) copy files
+
+
+1) two ways to generate keys: a) aws can generate for you (you have to download them) b) on a local machine use ssh-keygen (ssh generate you a pair of RSA keys) - see saasbook loc.9981 
+
+  cd ~/.ss
+  ssh-keygen -t rsa -C "yao@acm.org
+  # when prompted for 'File in which to save key', press Return to accept defaul
+  # when prompted for passphrase, press Return to leave blan
+  chmod 0600 *
+
+2) connect and disconnect
+  - ssh -i key.pem hostname # this is full command: you have to specify path to your pem file (-i option to specify pemfile) and full hostname (you can find it on aws)
+  - ssh awshost1 # you can specify shortcats in a config file;
+
+  ~ $ cat .ssh/config 
+  Host awshost1
+  HostName ec2-54-218-77-144.us-west-2.compute.amazonaws.com
+  User ubuntu
+  IdentityFile "~/.ssh/cs184-john-stanford-edu.pem"
+
+  - exit to disconnect
+
+3) copy files. you copy files from terminal on the LOCAL machine.
+  - scp source destination (like cp); for file on the server add
+ awshost1: (example: scp awshost1:~/
+
+
