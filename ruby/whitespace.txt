@@ -1,0 +1,3 @@
+It's not the case that Ruby does not care about whitespace. It does! 
+
+In python we have problems with indentation. In Ruby with a lot more things. Example: foo[1] (call [ ] method) and foo [1] (call foo with arg [1]).

@@ -1,0 +1,137 @@
+general
+---------
+
+1) everything is an object. in Java, as an example, some values that are not objects are null, 13 and true.
+
+2) mixins is a compromiss btw C++ and java: in java interfaces can not define methods;
+
+3) have reflections: .class, .methods (gives an array of defined methods) etc.
+
+4)  again - blocks are like closures; in fact - what we can see in Ruby - is *higher-order programming* (we do not use loops); there are full-functional closures in Ruby as well;
+
+???
+
+1) it is class-based in comparison with javascript;
+2) there are often *many* ways to say the same thing; (example if statement) why?
+3) instance variables are always private that is not the case in java? self.@foo is not legal syntax?
+4) In OOP, another common name for a method call is a message send.
+5) instance variables in fact global within a class definition
+6) other names for instance variables - fields, attributes
+7) no list of instance variables like in java 
+8) difference between initialize and constructor in java?
+9) duck typing
+
+
+interesting definition of a scrypting language:
+
+    It means the language is engineered toward making it easy to write a) short programs, b) providing convenient access to manipulating files and c) strings, d) and having less concern for performance. 
+    Like many scripting languages, Ruby does not require that you e) declare variables before using them and f) there are often many ways to say the same thing.
+
+classes
+----------
+
+1) implicit return like in ML and racket (can be used return if necessary to return within a method);
+
+2) if a method argument has a default, then all arguments to its right must also have a default. 
+
+3) As for syntax, the parentheses are optional. In particular, a zero-argument call is usually written e0.m, though e0.m() also works.
+
+4) you can write self.m(...) or just m(...) - the last expression is just a syntactic sugar!
+
+5) method can return self.
+
+6) It turns out puts is a method in all objects (it is defined in class Object).
+
+7) A class constant is a lot like a class variable (see above) except that (1) it starts with a capital letter instead of @@, (2) you should not mutate it, and (3) it is publicly visible. Outside of an instance of class C, you can access a constant Foo of C with the syntax C::Foo. 
+  
+
+arrays
+---------
+
+    -> main idea: they are incredibly flexible
+
+a = [1,2,3]
+
+1) no out-of-bound exception a[1000] = nil 
+2) you even can assign a[1000] = 10 - you'll get [1,2,3,nil,nil, ... , 10]
+3) arrays can be a stack (and a queue) - they have pop and push methods
+
+iterators
+----------
+well, each is not the only iterator in Ruby:
+
+    integers: times, upto, downto, step
+    range: each, step
+    string: each, each_line, each_byte
+    array: each, each_index, each_with_index
+    hash: each, each_key, each_value, each_pair
+
+blocks methods
+-----------------
+
+it seems we have a full-flavored functional programming in Ruby:
+
+1) find (like filter): find/detect, find_all/select, any?, all?, delete_if
+2) map/collect 
+3) inject (like reduce)
+
+4) merge: for hashes only
+
+    -> all these methods in teh module Enumerable;
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+match modifiers
+-----------------
+
+  /i - case insensitive
+
+  /s - . matches \n as well (ie it matches all symbols)
+  
+  /x - can add space to pattern for better readability; you also can comment using this option (comments are treated like whitespace)
+
+  -> you can combine them: /isx
+
+  /g - global, multiple matches in a string?
+ 
+  /m - multiline?
+
+  -> these 5 modifiers are using in RegExr program!
+
+precedence
+------------
+
+Very simple rules:
+
+  1) Parents
+  2) Quantifiers
+  3) Anchors
+  4) Alternation 
+  5) Atoms
+
+binding operator =~
+---------------------
+
+

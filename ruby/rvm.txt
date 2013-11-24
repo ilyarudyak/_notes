@@ -1,0 +1,25 @@
+lists:
+----------
+
+1) rvm list known - list all known rubies
+2) rvm list rubies - list rubies
+3) rvm list default - default ruby
+3) rvm gemset list - list gemsets for current ruby
+
+
+
+installation and switching:
+-----------------------------
+
+2) rvm install 1.9.2
+
+3) rvm use 1.9.2 - for current session
+3a) rvm use 1.9.2 --default - for all sessions
+4) rvm use system - back to system version
+
+5) ruby -v
+6) which ruby
+7) rvm alias show default - show rvm default version
+
+
+ 

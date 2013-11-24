@@ -1,0 +1,33 @@
+1) type (or tag) selector: p,
+   1.1) one selector: h2 etc.
+   1.2) group of selectors: h1,h2,h3
+
+2) class-selector: .headline
+   (match a SUBSET of elements based on their class;
+   use MULTIPLE times)
+   
+3) id-selector: #headline
+   (match a SINGLE element based on its id-element;
+   use only ONE time)
+   
+_____________________________________________________   
+   
+4) descendant selector: p span
+   (elements nested inside other elements)
+   
+5) pseudo-class: a:hover
+   (match an element only when it is in
+   a specified state)
+   
+   5.1) first-child: li:first-child
+   (mark the first li of the list; every list)
+   
+   links:
+   5.2) a:link
+   (not yet visited links?)
+   5.3) a:active
+   (in the process of visiting?)
+   5.4) a:hover
+   (when hovering a mouse?)
+   
+   

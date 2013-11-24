@@ -1,0 +1,8 @@
+1) :desk.to_s # prints desk
+2) :desk.object_id # the same object_id in comparison with "desk"
+3) immutable, no assignment
+4) no string methods
+
+usually we use symbols based on 3) and 4). most common uses: a) hashes (required immutable key in a hash - search time O(n) for string and O(1) for a symbol) b) attr_getter etc. (not required). 
+
+also there are some performance differences between using symbols and strings.
