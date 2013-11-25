@@ -1,0 +1,40 @@
+create and switch
+-------------------
+1) git br new_branch - create branch new_branch
+2) git co new_branch - switch to it; git co master - switch back to master;
+3) git br - to show all branches; * indicates HEAD;
+
+    -> working dir should be clean (no uncommited changes) to make switch;
+
+diff and rename
+-----------------
+1) git diff branch1..branch2 - difference between branch1 and branch2;
+2) git branch -m branch_oldname branch_newname - rename a branch
+
+viewing branches
+-----------------
+1) git br - local branches
+2) git br - r; git br -a - remote and all
+3) git br --merged; --no-merged - list of merged branches to the current branch (or not merged)
+4) git br --contains <commit id> - list all branches that contain this id
+
+merging
+---------
+pre-conditions:
+a) switch to a RECEIVER 
+b) do merge with a clean working dir 
+
+1) git merge seo_title - merge seo_title TO master (we are currently in master)
+2) 
+
+
+
+
+
+
+
+
+
+
+
+ 
