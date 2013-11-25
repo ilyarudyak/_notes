@@ -1,0 +1,15 @@
+1) git commiit -a (or --all) commits: a) staged b) modified but not staged; it also commits a file we removed with rm command (if we use git rm instead the file will be already staged); it does NOT commit untracked files.
+
+undoing changes
+-----------------
+
+1) before staging (in working dir): git checkout -- filename;
+2) staged, but not commited (ie unstaged): git reset HEAD filename;
+3) amend *last* commit (with changes in files or simply amend commit name): git commit --amend;
+4) to change other commits (not the last one) is better to create new commit: git checkout ##hash -- filename (in fact step back to this commit) and then commit this state;
+
+branches
+---------
+
+1) create new branch: git branch new_branch
+2) 
