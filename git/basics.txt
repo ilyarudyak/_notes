@@ -1,4 +1,25 @@
-commiting changes
+content
+------------
+1) modifying files: git add, commit
+2) undoing changes (git checkout)
+3) moving and removing files (git mv, rm)
+
+4) git diff
+5) git log
+
+(separate file)
+6) branches - creating (git branch)
+7) branches - merging (git merge)
+
+(separate file)
+8) github
+
+9) commits - in depth
+10) .gitignore
+11) .git
+
+
+1) modifying files
 --------------------
 
 we have 2-step process to commit changes:
@@ -65,7 +86,7 @@ undoing changes
     a) git revert HEAD (or 7-digit number) - this command creates new commit (w/o changes); so you have 2 commits - with changes and w/o;
     b) git commit --amend -m "..." - just to amend the last commit; 
 
-.gitignore
+10) .gitignore
 ------------
 
 you should create this file for a working repository. do not use .git/info/exclude. it can not be shared. see here: https://help.github.com/articles/ignoring-files.
