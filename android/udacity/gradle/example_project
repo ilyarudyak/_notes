@@ -1,0 +1,11 @@
+- we use predetermined structure of a project: source code in the directory src/main/java etc.;
+
+- we use java plugin: apply plugin: 'java';
+
+- we build a project with: gradle build; this actually contains a lot of tasks (compile, assemble, jar etc.);
+
+- UP-TO-DATE - we use incremental build (automatically identifies that no work needed to be done);
+
+- custom build: 1) we add version to *.jar; 2) add main class to manifest; 3) deal with legacy projects - specify that code is in src, not src/main/java;
+
+- dependencies: instead of manually download and include libs we can add a) repository (like mavenCentral()) and b) dependencies; gradle download and include all libs automatically;

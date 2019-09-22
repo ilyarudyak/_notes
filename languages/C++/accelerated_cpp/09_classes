@@ -1,0 +1,48 @@
+ member functions and protection
+ ---------------------------------
+
+  - member functions - we use this word instead of "method" in java; we define signature of a member function in *.h file and implement it in *.cpp file; we use fully qualified name in *.cpp file:
+
+    istream& Student_info::read(istream& in) { ... }
+
+  - in some cases we can define functions outside of class (this is typical for C++ - there are a lot of exceptions); for example we define compare() outside of a class for some reasons;
+
+  - we have protection labels private and public; if no label - members are private (in class and public in struct - the only *tecgnical* difference between them);
+
+  - for member functions we can use const modifier (for example for getters); 
+
+  constructors
+  -------------
+
+    - There is no way to call a constructor explicitly. Instead, creating an object of class type calls the appropriate constructor is called automatically as a side effect.
+
+    - How default constructor initialize variables? 
+
+      (a) build-in types *uninitialized* except:
+
+          - they are static;
+
+          - or used in containers (that's why we may use shortcut for map m[key] = value without checking if key exists); the latter is not default initialization but rather value initialization;
+
+      (b) class types are initialized using their constructors. again in case of string or vector we'll have empty objects. 
+
+    - Againg usually it's better not to use default constructor with uninitialized build-in types;
+
+    - The main job of a constructor without arguments is to properly initialize its variables. We have to initialize only built-in types. 
+
+    And we do this with colon initialization (it seems initialization and execution of constructor body are different things in C++). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

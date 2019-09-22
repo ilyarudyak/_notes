@@ -1,0 +1,27 @@
+intro
+-------
+
+- Alarms (based on the AlarmManager class) give you a way to perform time-based operations outside the lifetime of your application. 
+
+- They operate outside of your application, so you can use them to trigger events or actions even when your app is not running, and even if the device itself is asleep.
+
+- For example, you could use an alarm to initiate a long-running operation, such as starting a service once a day to download a weather forecast.
+
+alarm type
+------------
+
+- There are two general clock types for alarms: "elapsed real time" and "real time clock" (RTC). Elapsed real time uses the "time since system boot" as a reference, and real time clock uses UTC (wall clock) time. The first one preferrable and should be used if possible.
+
+- Both types have a "wakeup" version, which says to wake up the device's CPU if the screen is off. Again use "wakeup" with caution.
+
+questions
+-----------
+
+how to create alarm?
+- a) call to system services to get AlarmManager and b) provide some parameters to this manager including pending intent;
+
+why pending intent?
+- it seems we can not use standard imtent outside of application;
+
+what does alarm produce?
+- it simply fires this pending intent; so we can use to start services etc.

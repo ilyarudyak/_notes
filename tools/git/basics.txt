@@ -1,0 +1,118 @@
+content
+------------
+1) modifying files: git add, commit
+2) undoing changes (git checkout)
+3) moving and removing files (git mv, rm)
+
+4) git diff
+5) git log
+
+(separate file)
+6) branches - creating (git branch)
+7) branches - merging (git merge)
+
+(separate file)
+8) github
+
+(separate file)
+9) commits - in depth
+
+10) settings
+10) .gitignore
+11) .git
+
+
+1) modifying files
+--------------------
+
+we have 2-step process to commit changes:
+1) stage to commit
+2) commit
+
+    # We modified a file and use git status:
+    # Changes not staged for commit:
+    #	modified:   file1.txt
+
+  we have two options to stage a file: a) git add filename b) use option -a in git commit.
+
+    # We added a file (git add file1.txt):
+    # Changes to be committed:
+    #	modified:   file1.txt
+
+  we can now commit. 
+
+    -> git commiit -a (or --all) commits: a) staged b) modified but not staged; it also commits a file we removed with rm command (if we use git rm instead the file will be already staged); it does NOT commit untracked files.
+
+simple example. 2-step process gives us an ability to separate changes in different files.
+
+    git add a.rb
+    git add b.rb
+    git commit -m "Changes for a and b"
+
+    git add c.rb
+    git commit -m "Unrelated change to c"
+
+2) undoing changes
+------------------
+
+1) before staging: git checkout - *completely* remove changes w/o any track records from git. git will give status - nothing to commit.
+
+2) after staging: git reset HEAD - revert staging but not changes (you are now in phase 1 - you have changes before staging; you may now use git checkout)
+
+3) after commiting: 
+    a) git revert HEAD (or 7-digit number) - this command creates new commit (w/o changes in HEAD commit); so you have 2 commits - with changes and w/o;
+    b) git commit --amend -m "..." - just to amend the last commit (both content and its name; 
+
+
+3) moving files
+---------------
+
+1) we have two options for moving files: 1) with mv 2) wit git mv. we have more flexibility with 1st option because in the 2nd case we also staged this change. so it's an equavalent:
+
+    git mv hello.rb lib
+
+    mv hello.rb lib
+    git add lib/hello.rb
+    git rm hello.rb
+
+you may also a) rename file with this command and b) move dir (w/o using -r flag).
+
+2) the same command for remove: git rm. to remove a dir: git rm -r (you don't need -r for mv command). if you have smth to commit you may not be able to remove dir. do this commit or use -f option. 
+
+
+4) git diff
+---------------
+1) unstaged changes: git diff (all files) or git diff filename;
+2) staged changes: git diff --staged [filename];
+
+
+
+10) global vs local settings
+--------------------------
+
+global settings are in the ~/.gitconfig file. 
+local - in .git/config inside working dir.
+
+also we have two options for an ignore file:
+
+    1) local: .gitignore (do not use .git/info/exclude. it can not be shared. see here: https://help.github.com/articles/ignoring-files and also examples of .gitignore files there)
+    2) global: ~/.gitignore (with excludesfile = /Users/IRudyak/.gitignore in global .gitconfig. 
+
+ideas to ignore:
+    1) compiled source code;
+    2) packages and compressed files;
+    3) logs and databases;
+    4) operating system generated files;
+    5) user-uploaded assets;
+
+
+
+
+
+
+
+
+
+
+
+

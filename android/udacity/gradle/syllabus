@@ -1,0 +1,29 @@
+lesson1 - fundamentals
+------------------------
+
+- build tools
+- tasks: config and dependencies
+- file management
+- incremental builds
+- param builds
+- custom tasks -SKIPPED
+- logging
+- build lifecycle
+
+lesson2 - java
+-----------------
+
+- plugins
+- java plugin - build
+- java plugin - dependencies
+- unit tests
+- wrapper
+
+lesson3 - android
+-------------------
+
+- android studio
+- import projects
+- android plugin
+- build types
+- flavors

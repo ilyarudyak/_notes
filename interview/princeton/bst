@@ -1,0 +1,6 @@
+exercises:
+
+  - theoretic: 5, 8, 11, 24;
+  - not done: 10, 12;
+  - don't understand: 9, 16, 22;
+  - delete: 17-20, 23;

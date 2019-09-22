@@ -1,0 +1,9 @@
+(1) Too many type sizes and styles at once can wreck any layout. A typographic scale has a limited set of type sizes that work well together along with the layout grid. 
+
+  - xml attr: TextAppearance.Material.Display4 etc.
+
+  - Across form factors, text that appears in the app bar should use the Title style, Medium 20sp. 
+
+  - Button style (Medium 14sp, all caps) is used for all buttons. Button text should be all caps in languages that have capitalization. 
+
+(2) A text color that is too similar to the background color is hard to read. Text with too much contrast can also be hard to read. This is especially true of light-colored text against dark backgrounds. See recommended colors in the guide.

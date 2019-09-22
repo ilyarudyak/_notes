@@ -1,0 +1,103 @@
+- The general syntax for a function is as follows:
+
+    function function_name([parameter [, ...]]) 
+    {
+        // Statements 
+    }
+
+- There are also ways of getting multi‐ ple values from a function. The first method is to return them within an array. 
+
+    return array($n1, $n2, $n3);
+
+- In PHP versions prior to 5.3.0, you used to be able to preface a variable with the & symbol to tell the parser to pass a reference to the variable, not the variable’s value. I must reemphasize that this is no longer supported programming practice in PHP, and you should therefore convert any code that relies on passing by reference. 
+
+include
+---------
+
+- In general, it’s probably best to stick with include_once and ignore the basic include statement. That way, you will never have the problem of files being included multiple times.
+
+- A potential problem with include and include_once is that PHP will only attempt to include the requested file. Program execution continues even if the file is not found.
+
+classes
+---------
+
+- declare class:
+
+    class User {
+
+        public $name, $password;
+
+        function save_user()
+        {
+            echo "Save User code goes here";
+        }
+    }
+
+- create object:
+
+    $object = new User;
+
+- accessing object properties and methods:
+
+    $object->name     = "Joe";
+    $object->password = "mypass";
+  
+    $object->save_user();
+
+You should note that the example property and method do not have $ signs in front of them.
+
+- However, PHP 5 provides a more logical approach to naming the constructor, which is to use the function name __construct:
+
+     class User
+    {
+        function __construct($param1, $param2)
+        {
+            ...
+        }
+
+- If you are using PHP 5, you can also define a method as static, which means that it is called on a class, not on an object. A static method has no access to any object prop‐ erties and is created and accessed as in Example 5-18.
+
+    User::pwd_string();
+    
+    class User {
+        static function pwd_string()
+
+Note how we call the class itself, along with the static method, using a double colon (also known as the scope resolution operator), not ->. 
+
+- declaring constants:
+
+    class Translate
+      {
+        const ENGLISH = 0;
+        const SPANISH = 1;
+        const FRENCH  = 2;
+
+        static function lookup()
+        {
+          echo self::SPANISH; 
+        }
+
+You can reference constants directly, using the self keyword and double colon oper‐ ator. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

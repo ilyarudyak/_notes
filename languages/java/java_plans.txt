@@ -1,0 +1,132 @@
+october 
+---------
+
+  - java 8
+  - generics (deep understanding of the language)
+
+november
+---------
+
+  - design patterns
+  - databases in android
+  - advanced java training
+
+december
+----------
+
+  - hadoop (?)  
+
+january
+---------
+
+  - n/a
+
+february
+---------
+
+  - networking
+
+march
+-------
+
+  - multithreading
+
+april
+-------
+
+  - performance
+
+potential books to read
+--------------------------
+
+  - Java Performance: The Definitive Guide
+  - Java Threads
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+old plans
+--------------
+
+June
+-----
+
+(1) jdbc
+(2) swing
+(3) multithreading
+(4) multithreading
+
+(+) testing & debugging
+(+) building with maven
+
+July
+-----
+
+(1) servlets
+(2) servlets
+
+(+) java 8
+(+) design patterns
+
+September
+--------
+
+(1) groovy
+(2) groovy
+
+books
+------
+
+  deitel:
+  (1) java 10th ed. - java 8
+  (2) java 9th ed. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

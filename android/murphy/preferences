@@ -1,0 +1,5 @@
+- To get access to the preferences, you have three APIs to choose from. Unless you have a good reason to do otherwise, you are best served using the third option above — getDefaultSharedPreferences() — as that will give you the SharedPreferences object that works with a PreferenceActivity by default.
+
+- Given the appropriate SharedPreferences object, you can use edit() to get an “editor” for the preferences. This object has a set of setters that mirror the getters on the parent SharedPreferences object.
+
+- 

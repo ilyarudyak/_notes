@@ -1,0 +1,48 @@
+problems
+-----------
+
+  - 90% of algos based on DFS (except shortest path); many algos use short additions to DFS but they are not that simple;
+  - scheduling based on studying DAGs and cycles; 
+  - connectivity is much more complex than in undirected case;
+
+  reachability
+  ---------------
+
+  (1) single- and multiple-source reachability. this is solved with DFS (code is the SAME as we use in undirected case). code is recursive. 
+
+  (2-3) directed paths and shortest directed paths. pure DFS can only unswer the question if two vertices are connected (directly) but doesn't give as a path. we can modify DFS (as usual) to get this path. again the algo is the same as we use before.
+
+  typical applications: garbage collection (mark-sweep algorithm); control-flow analysis (dead-code elimination, infinite-loop analysis); web-crawling (BFS);
+
+  scheduling
+  ------------
+
+  (6) scheduling. what is the difference from topological sort?
+
+  (4) directed cycle detection. we can solve scheduling only in DAG, so we have to determine if there is a cycle in the graph. this is simple modification of DFS.
+
+  (7) topological sort. when all edged are oriented in the same direction. one-liner addition to DFS (but again - this is not that simple).
+
+  typical applications: scheduling; cycles in class inheritance; circular reference in excel;
+
+  connectivity
+  --------------
+
+  (8) strong connectivity. if we have path v -> w it's not enough, we need also directed path w -> v. in this case v and w are strongly connected. 
+
+  questions: Are two given vertices strongly connected? and How many strong components does the digraph have ?
+
+  we have KosarajuCC - simple code but it's really difficult to understand why it works; this was an open problem for quite some time - so it's suprising that we have such a simple solution;
+
+  (9) All-pairs reachability. Given a digraph, support queries of the form: Is there a directed path from a given vertex v to another given vertex w? (so we may be don't have path w -> v and these vertices are not strongly connected).
+
+  it seems that we have to solve more general problem - find transitive closure (edge v -> w iff w is reachable from v);
+
+  typical applications: food chain; software modules;
+
+  misc
+  ------
+
+   (5) vertex orders (?)
+
+

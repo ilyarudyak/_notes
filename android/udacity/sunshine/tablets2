@@ -1,0 +1,25 @@
+how to create 2-pain layout?
+
+  - xml:
+
+    1) create layout-sw600dp folder: we create 2-pain layout for nexus 7 (960dp x 600dp); both for portrait and landscape;  
+    
+    2) create activity_main.xml in this folder: we override normal file; we add frame layout for the second fragment (dynamic fragment); 
+    
+    for forecast we use static fragment as in phone layout; we use this xml file for both portrait and landscape on a tablet;
+
+    detail fragment should be dynamic in phone layout as well (?);
+    
+
+  - java (changes in main activity):
+
+    4) we check if we have a tablet:
+
+      findViewById(R.id.weather_detail_container) != null
+
+    and add dynamically detail fragment in this container;
+
+    5) we also set mTwoPane = true (we use this in callback to replace our fragment);
+
+    6) we also use fragments tags and update fragments on location change somehow;
+

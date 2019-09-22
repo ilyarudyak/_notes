@@ -1,0 +1,5 @@
+  - data abstraction: separation of interface and implementation (headers and *.cpp files!); 
+  - encapsulation - hiding implementation;
+  - abstract data type - a class that uses data abstraction (hence abstract!) and encapsulation. why data type? it's a second type of data types, first is build-in types.
+
+  

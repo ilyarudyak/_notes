@@ -1,0 +1,51 @@
+intro
+------
+
+  - how is this 3x4 world organized? 
+
+    (a) stochastic movement;
+    (b) wall blocks; 
+    (c) reward function: big reward in terminal nodes, small reward in other nodes ("living reward");
+    (d) goal: maximize sum of rewards;
+
+  - what are main parameters of MDPs?
+
+    (a) set of states S; start state; terminal states;
+    (b) set of actions A;
+    (c) transition function T (or probability distribution P);
+    (d) reward function R;
+
+  - what is the main characteristic of MDPs? no memory about states except the last one (in other words - transition function depends only on the last state, not previous ones);
+
+  - what solution do we need in classic search and in MDPs? in search we need a path, in MDPs - a *policy*: pi: S->A;
+
+  - what is Q-state? we can't get from s to s' due to error - so we get to Q(s, a) state and then into s' with certain probability (and to other possible states with other probability);
+
+solving MDPs
+--------------
+
+  - Bellman equation - see on drive or slides;
+
+  - what is the problem with that? the tree is HUGE (potentially infinite like in case of cars) and contains repeated states;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

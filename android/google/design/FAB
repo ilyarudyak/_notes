@@ -1,0 +1,34 @@
+(1) Floating action buttons come in two sizes:
+
+  - Default size: For most use cases
+  - Mini size: Only used to create visual continuity with other screen elements
+
+(2) The FAB has an ink wash upon focus (?) and lifts (yes - lifts) upon being selected.
+
+(3) Make floating action buttons positive actions like Create, Favorite, Share, Navigate, and Explore. Avoid using floating action buttons for minor and destructive actions.
+
+Behavior
+---------
+
+(4) The floating action button animates onto the screen as an expanding piece of material, by default. Floating action buttons may appear and move on screen differently than other UI elements because of their relative importance.
+
+If there is a floating action button on multiple lateral screens (such as on tabs), upon entering each screen, the button should show and hide if the action contained on each is different. If the action is the same, the button should stay on screen (and translate to a new position, if necessary)
+
+Transitions
+------------
+
+(5) Common transitions include Trigger, Toolbar, Speed dial, and Morphing.
+
+  - Trigger. Trigger an action (Navigate, Share etc.) is the main function of FAB.
+
+  - Toolbar. The floating action button can transform into a toolbar upon press or from a toolbar upon scroll. The toolbar can contain related actions, text and search fields, or any other items that would be useful at hand. 
+
+  - Speed dial. The floating action button can fling out related actions upon press. The button should remain on screen after the menu is invoked (like in inbox when new message is pressed).
+
+  - Morphing. The floating action button can transform into sheets of material (including full screen) that are part of the app structure. This dramatic transformation accentuates the action the button enables. 
+
+
+
+
+
+

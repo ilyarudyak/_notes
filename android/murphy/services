@@ -1,0 +1,60 @@
+intro
+-------
+
+- Creating a service implementation shares many characteristics with building an activity. You 1) inherit from an Android-supplied base class, 2) override some lifecycle methods, and 3) hook the service into the system via the manifest.
+
+- how to start a service? 
+
+  Clients of services — frequently activities, though not necessarily — have two main ways to send requests or information to a service. 
+
+  One approach is to send a command, which creates no lasting connection to the service. The other approach is to bind to the service, establishing a communications channel that lasts as long as the client needs it.
+
+start service with no binding
+------------------------------
+
+- how to use startService()?
+
+  The startService() method takes an Intent parameter, much like startActivity() does. 
+
+- how to communicate TO the service?
+
+  In fact, the Intent supplied to startService() has the same two-part role as it does with startActivity(): 1. Identify the service to communicate with 2. Supply parameters, in the form of Intent extras, to tell the service what it is supposed to do.
+
+- how long does service work?
+
+  By default, calling startService() not only sends the command, but tells Android to keep the service running until something tells it to stop.
+
+  The primary role of a service is as a flag to the operating system, letting it know that your process is still doing work, despite the fact that it is in the background. This makes it somewhat less likely that Android will terminate your process due to low memory conditions.
+
+- how to stop service?
+
+  One way to stop a service is to call stopService(), supplying the same Intent used with startService(), or at least one that is equivalent (e.g., identi8es the same class). At that point, the service will stop and will be destroyed. Note that stopService() does not employ any sort of reference counting, so three calls to startService() will result in a single service running, which will be stopped by a call to stopService().
+
+  Another possibility for stopping a service is to have the service call stopSelf() on itself. You might do this if you use startService() to have a service begin running and doing some work on a background thread, then having the service stop itself when that background work is completed.
+
+- how to communicate FROM the service?
+
+  ... (a few methods - see p. 685)
+
+  Another approach is for the service to let the user know directly about the work that was completed. To do that, a service can raise a Notification — putting an icon in the status bar and optionally shaking or beeping or something. This technique is covered in an upcoming chapter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

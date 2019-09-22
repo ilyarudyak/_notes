@@ -1,0 +1,46 @@
+what is the difference between dijkstra  and bellman-ford?
+
+  - dijkstra requires non-negative edges, bellman-ford works in general case (with negative edges);
+
+what is the running time of dijkstra?
+
+  - O((E + V)*logV) - in case of binary heap; O(E + V*logV) in case of fibonacci heap; in DAG we have O(E + V);
+
+what is the type of dijkstra?
+
+  - this is a GREEDY algorithm; 
+
+  - Dijkstra’s algorithm, which we shall see in Section 24.3, is a greedy algorithm, and the Floyd- Warshall algorithm, which finds shortest paths between all pairs of vertices (see Section 25.2), is a dynamic-programming algorithm.
+
+what is the main idea?
+
+  - Shortest-paths algorithms typically rely on the property that a shortest path between two vertices contains other shortest paths within it.
+
+  - Recall that optimal substructure is one of the key indicators that dynamic programming (Chapter 15) and the greedy method (Chapter 16) might apply. 
+
+what is the main operation?
+
+  - relaxation: we have edge u->v and provisional d(u), d(v); if d(u) + w(u->v) < d(v) we change d(v) (to d(u) + w(u->v); and do not change in an opposite case; we started from d(.) == infinity as usual); 
+
+how algo in DAG relates to PERT?
+
+  - in order to find LONGEST path just negate edges and tale care of comparison (change > by <);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

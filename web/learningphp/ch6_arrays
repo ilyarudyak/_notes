@@ -1,0 +1,59 @@
+- type of arrays: 1) basic arrays; 2) associative arrays (like dictionaries in python)
+
+- Whether you specify keys, specify numeric identifiers, or let PHP assign numeric identifiers implicitly, this is a long-winded approach. A more compact and faster assignment method uses the array keyword.
+    
+    $p2 = array('copier' => "Copier & Multipurpose", ...
+
+- The creators of PHP have gone to great lengths to make the language easy to use. So, not content with the loop structures already provided, they added another one espe‐ cially for arrays: the foreach...as loop.
+
+    foreach($paper as $item) // basic array
+    foreach($paper as $item => $description) // associative
+
+- As an alternative syntax to foreach...as, you can use the list function in conjunc‐ tion with the each function, as in Example 6-8.
+
+functions
+-----------
+
+- is_array(). Arrays and variables share the same namespace. This means that you cannot have a string variable called $fred and an array also called $fred. If you’re in doubt and your code needs to check whether a variable is an array, you can use the is_array function.
+
+- count(). Although the each function and foreach...as loop structure are excellent ways to walk through an array’s contents, sometimes you need to know exactly how many ele‐ ments there are in your array, particularly if you will be referencing them directly. To count all the elements in the top level of an array, use a command count().
+
+- sort(). Unlike some other functions, sort will act directly on the supplied array rather than returning a new array of sorted elements. Instead, it returns TRUE on success and FALSE on error. 
+
+Supports a few flags, but the main two that you might wish to use force sorting to be made either numerically or as strings, like this:
+
+    sort($fred, SORT_NUMERIC);
+    sort($fred, SORT_STRING);
+
+You can also sort an array in reverse order using the rsort() function.
+
+- explode(). This is a very useful function with which you can take a string containing several items separated by a single character (or string of characters) and then place each of these items into an array. 
+
+- extract(). Sometimes it can be convenient to turn the key/value pairs from an array into PHP variables. One such time might be when you are processing the $_GET or $_POST vari‐ ables as sent to a PHP script by a form. So, if the query string parameter q is sent to a PHP script along with the associated value Hi there, a new variable called $q will be created and assigned that value.
+
+Be careful with this approach, though, because if any extracted variables conflict with ones that you have already defined, your existing values will be overwritten. To avoid this possibility, you can use one of the many additional parameters available to this function, like this.
+
+- compact(). At times you may want to use compact, the inverse of extract, to create an array from variables and their values.
+
+Note how compact requires the variable names to be supplied in quotes, not preceded by a $ symbol. This is because compact is looking for a list of variable names.
+
+Another use of this function is for debugging, when you wish to quickly view several variables and their values
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

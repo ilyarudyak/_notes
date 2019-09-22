@@ -1,0 +1,8 @@
+pruning
+---------
+
+  - alpha-beta pruning: key idea - we may drop some choices for a node if its min already less than in other node;
+
+  - alpha is the best choice for max; beta - for min; so we have mutual recursion;
+
+  - it seems that complexity drops by O(b^(m/2));

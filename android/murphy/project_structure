@@ -1,0 +1,56 @@
+soursesets
+------------
+
+- A sourceset is simply a group of source 8les which are compiled and executed together.” Here, “source” means all the inputs that you are creating for the app, such as Java source code, Android resources and manifest 8les, and the like. 
+
+- As we will see, the new project structure assumes the existence of at least one sourceset, typically named main, but other features of the new build system will involve additional sourcesets.
+
+- Resources from the build type’s sourceset are merged into the resources from the main sourceset, and if there are collisions, the build type’s resource takes precedence. The same is true for assets.
+
+In other words, resources in build types’ sourcesets replace their counterparts in the main. Or, a build type could add a new resource that is missing from main, if desired.
+
+- Java - main and debug can not have the same file; so we have to put different versions in debug and relise, but not in main; see details on p. 875; 
+
+build variants
+-------------
+
+- build types: debug, relise; A build type is one axis of possible alternative outcomes from the build process.; 
+
+The Gradle for Android plugin though allows build types to have slightly di7erent con8gurations, such as adding a .debug su9x to the APK’s package name, so that you can have a release build and a debug build of your app on the same device at the same time. 
+
+- product flavors: free, paid; A build type is one axis for varying your output. A product :avor is another, independent axis for varying your output.
+
+Product :avors are designed for scenarios where you want di7erent release output for di7erent cases. For example, you may want to have one version of your app built to use Google’s in-app purchasing APIs (for distribution through the Play Store) and another version of your app built to use Amazon’s in-app purchasing APIs (for distribution through the Amazon AppStore for Android).
+
+And *most* of the code for the two versions of the app will be the same.
+
+- build variance: The term “build variant” is used for the cross product of the build types and the product :avors. So, a project with debug and release build types and google and amazon product :avors will result in a total of four build variants by default:
+
+  1. debug + google
+  2. debug + amazon
+  3. release + google
+  4. release + amazon
+
+project structure
+-------------------
+
+- With the new project structure, src/ is the root of the source sets, not just where the source code goes.
+
+- There is one sourceset, named main, in the src/main/ directory. In there is where the res/ directories go along with the AndroidManifest.xml. 
+
+- And, there is a java/ directory that contains the Java source tree
+
+
+android studio
+---------------
+
+- build variants view: Each of your app’s modules is shown, along with the current build variant that will be used if you run that module. Tapping on the build variant will allow you to choose an alternative build variant:
+
+- android project view: Just as the Android project view "collapses" resource set, it also collapses sourcesets;
+
+
+
+
+
+
+

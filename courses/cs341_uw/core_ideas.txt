@@ -1,0 +1,96 @@
+Core ideas in programming languages
+------------------------------------
+
+1) static and dynamic checking -ok
+2) duck typing -ok
+3) eager evaluation
+4) env and varuable lookup
+5) closure
+6) lexical scope
+7) assignment
+8) dynamic dispatch -ok
+9) 
+
+
+
+
+
+Static and dynamic checking
+-----------------------------
+
+1) we have parsing -> static checking -> running; so it's checking BEFORE running;
+
+  - parsing checks syntax errors (like a) no ; b) elsif instead of else if c) using reserved words etc.)
+
+  - examples of static checking: a) if we have a call f(s) where s - string but f requires int b) if we have a+b where a-string and b-int c) if we have car x and x is not a list (which is the same as a)) d) and for a fuction we can get an error if we return string when type of f is int e) undefined variable or unused; 
+  - addditional examples in ML: e1 e2 where e1 is not a function; non-boolean between if and then; pattern-match with redundant pattern;
+
+  - static checking is (of course) based on type system; but it can work under the hood like in ML; and ML gives us a picture how this system can work;
+
+  - even dynamically typed languages can have some static tests (like undefined variable in Racket) but there are very few of them.
+
+  -> it is irrelevant whether the language implementation will use a compiler or an interpreter after static checking succeeds?
+
+  - static checking - dynamic checking is a continuum (theoretically; 
+
+ 2) checking is sound if it never accept a wrong program; and is complete if it rejects only bad programs (so if it can reject some good programs it is not complete);
+
+  - type systems can NOT be complete (from automata theory);
+
+  - a few examples of incompleteness - f defined as 1/string but never called; non-boolean in a condition branch that never evaluated;
+
+3) weak typing - it's probably not strictly defined and better to talk about different problems like memory errors; typical problem - buffer overflow when C does not check an array bounds; 
+
+ -> it's interesting that you have an alternative - when you call a[10] and array has only 5 elements you a) can get a default value and b) array will be expanded; so you may say - Ruby is even *more dynamic* than Python (you have also some methods on null etc.). 
+
+
+duck typing
+--------------
+
+good example of duck typing is in pickaxe, p. 345. you may test file appending programm using a file or just a string (or even an array). this possible because << operator can operate on all these structures. 
+
+dynamic dispatch
+-------------------
+
+    - how ruby lookup for a method? well, it looks in current classes and then superclasses. if no method found it calls method_missing. 
+
+    - what is the difference with closures? suppose we have methods m1 and m2 in class C that are related; than we created CC < C and m2_new in CC (overwriting m2) - we will use m2_new with m1; 
+    in case of closures result will be different - using m1 with m2 (not m2_new); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

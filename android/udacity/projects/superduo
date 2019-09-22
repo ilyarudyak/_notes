@@ -1,0 +1,109 @@
+ALEXANDRIA
+--------------
+
+how to get an image?
+  https://www.googleapis.com/books/v1/volumes?q=isbn:9781449319243
+  https://www.googleapis.com/books/v1/volumes?q=isbn:9780321784070
+
+BookSearchFragment
+--------------------
+
+  1) We add check for connectivity. If no connection is available we: a) notify a user with a toast and b) make both search field and search button inactive;
+
+  2) We add live search option. Default case - no live search. In this case a user have to press Search button manually to get results. 
+
+  If user choose live search option in Settings then we hide Search button. When a user enters an appropriate code search is perfoming automatically. The app behavior is the same as in the provided version.
+
+  3) We refactor buttons. We don't use service and we don't add a book to DB automatically. Now we have: a) Clear button - just clear screen (doesn't delete from DB); b) Add button - adds a book to DB.
+
+  4) We created Book class and store an instance in a member variable. We assign the value after search and than we use it for creating book details layout.
+
+  5) We add scan functionality to MainActivity and a Scanner button to ActionBar. We use ZXing library as described in Mark Murphy manual. After scanning is performed we create new BookSearchFragment with ISBN field filled in. Fragment behavior after that depends on live search option.
+
+  6) We use Picasso library to download book covers.
+
+TODO
+------
+
+  must:
+  1) screen rotation -DONE
+  2) more fields in adapter and picasso -DONE
+  3) scanning functionality -DONE
+
+  minor problems:
+  1) keyboard
+  2) move search to navbar; how search is organized??? via hash set???
+  3) details screen (separate activity, back button, problem with fragments)
+
+  probably not:
+  1) drawer
+  2) tablet layout 
+
+questions
+----------
+
+  - how do we organized notification?
+
+misc bugs
+----------
+
+1. deleteBook() in BookService is incorrect. We delete only an entry from books table but not entries from autors and categories tables.
+2. When we delete a book in BookDetail we return to ListView where this book is still presented.
+
+FOOTBALL
+---------
+
+http://api.football-data.org/alpha/fixtures?timeFrame=n2&X-Auth-Token=bc3ea73075124c10acf5b08adba55ca5
+
+http://api.football-data.org/alpha/fixtures?timeFrame=n2&X-Auth-Token=eea8fbd84aa84e2a9e1bcf324f993b05
+
+Arsenal FC 57 Premier League
+Aston Villa FC 58 Premier League
+Chelsea FC 61
+Everton FC 62
+Liverpool FC 64
+Manchester City FC 65
+Manchester United FC 66
+Newcastle United FC 67
+Tottenham Hotspur FC 73
+
+questions
+-----------
+
+1) how to organize service (when call, alarm) -DONE
+2) add borderless button to share -DONE
+
+3) how to retain and cash fragments 
+4) detail uris in content provider
+5) bug in viewpager titles
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

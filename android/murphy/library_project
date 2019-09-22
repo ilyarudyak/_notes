@@ -1,0 +1,5 @@
+- just use another gradle plugin: 
+  
+  apply plugin: 'com.android.library'
+
+- you create library via new module wizard; you then can use it: a) as a support library for an app in another module or b) create standalone file .aar; you need to include dependencies into gradle file;

@@ -1,0 +1,1 @@
+android create avd -n nexus_7 -t 3 --skin WXGA800-7in

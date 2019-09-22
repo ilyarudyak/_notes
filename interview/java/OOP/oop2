@@ -1,0 +1,63 @@
+What is the difference between a method declaration and a method signature?
+
+  - see here: https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html
+
+  - Two of the components of a method declaration comprise the method signature—the method's name and the parameter types.
+
+What is a recursive method?
+
+  - Java supports recursion. Recursion is the process of defining something in terms of itself. As it relates to Java programming, recursion is the attribute that allows a method to call itself. A method that calls itself is said to be recursive.
+
+  - When a method calls itself, new local variables and parameters are allocated storage on the stack, and the method code is executed with these new variables from the start. As each recursive call returns, the old local variables and parameters are removed from the stack, and execution resumes at the point of the call inside the method. Recursive methods could be said to “telescope” out and back.
+
+  - see also Complete Reference p. 140
+
+What is the final keyword used for?
+
+  - Final can be: (1) variable; (2) method; (3) class;
+
+  - Final variable can not be changed (including final parameter in a method). Final method can not be overriden; final class can not be inherited; 
+
+  - Can final variable be blank? How can we initialize it? Yes. Only in constructor.
+
+  - The same with static variable? Yes. Only in static block.
+
+  - What about pointers? If a final variable holds a reference to an object, then the state of the object may be changed by operations on the object, but the variable will always refer to the same object.
+
+    This also applies to arrays, because arrays are objects; if a final variable holds a reference to an array, then the components of the array may be changed by operations on the array, but the variable will always refer to the same array.
+
+  - Should we use them often - it seems not. see here: http://www.javapractices.com/topic/TopicAction.do?Id=23
+
+What is the static keyword used for?
+
+  - There will be times when you will want to define a class member that will be used independently of any object of that class. Normally, a class member must be accessed only in conjunction with an object of its class. However, it is possible to create a member that can be used by itself, without reference to a specific instance. 
+
+  - Instance variables declared as static are, essentially, global variables. When objects of its class are declared, no copy of a static variable is made. Instead, all instances of the class share the same static variable.
+
+  - Here, classname is the name of the class in which the static method is declared. As you can see, this format is similar to that used to call non-static methods through object- reference variables. A static variable can be accessed in the same way—by use of the dot operator on the name of the class. This is how Java implements a controlled version of global methods and global variables.
+
+Why can’t a static method access a nonstatic field?
+
+  - Because a static field/method--by definition--is not tied to any single object/instance of the class, while a non-static field/method always refers to an actual object/instance in some way.
+
+What are access modifiers used for? What are the different types?
+
+What are annotations used for?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

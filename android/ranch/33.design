@@ -1,0 +1,56 @@
+3 main principle of material design
+-------------------------------------
+
+- Material is the metaphor: The pieces of the app should act like physical, material objects. Here we deal with *surfaces*. We have to use elevation and 2 new widgets: floating action bars and snackbars.
+
+- Bold, graphic, and intentional: App designs should jump off the page like they would in a well-designed magazine or book.
+
+- Motion provides meaning: The app should animate in response to actions taken by the user. We have to use animation tools (remember PowerPoint): state list animators, animated state list drawables (yes, you read that right – they are different from state list animators), circular reveals, and shared element transitions. 
+
+material surfaces
+-------------------
+
+- This is the main concept in material design (remember Google+). These bits of cardstock act like magically changeable bits of paper and ink: they can grow, they can show animated pictures, they can show changing text. And they live in 3d space.
+
+- We use elevation (both in xml and java) and translationZ (?) to work with them.
+
+
+animation tools
+------------------
+
+- State list animators. When we press a button it goes down. And when we release it - goes up. We use the same view but change it behavior with animator. There is a separate folder for them: res/animator. There is a bit confusing another tool - animated state list drawable, with somewhat different function.
+
+- Circular reveal. The circular reveal animation is used in material design to look like an ink flood-fill. A view or piece of content is progressively revealed outward from a point of interaction, usually a point pressed by the user. The material design guidelines say that these animations should originate from the point where the user touched the screen.
+
+- Shared element transitions (hero transition). A shared element transition is an animation for any situation where you are transitioning between two screens that are displaying some of the same elements. In this case, both the big image on the right and the small one on the left are displaying the same picture. The picture, in other words, is a shared element.
+
+view components
+-----------------
+
+- Card. A card is a container for other kinds of content. It is elevated slightly, with a shadow behind it, and its corners are slightly rounded. We can tell you how to make them, though: by using CardView.
+
+- Floating action button (FAB). 
+
+- Snackbars. Snackbars are similar in purpose to Toasts, but unlike Toasts they are a part of your app’s own interface. A Toast appears above your app and will stick around even if you navigate away. Also, snackbars let you provide a button so that the user can take immediate action.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

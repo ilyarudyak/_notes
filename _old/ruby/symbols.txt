@@ -1,0 +1,11 @@
+2 main features: 
+1) :desk.object_id # the same object_id in comparison with "desk"
+2) immutable, no assignment
+
+3) :desk.to_s # prints desk
+4) no string methods
+5) internally, Ruby uses symbols to keep track of all the names it’s created for variables, methods, and constants; and stores them into its symbol table.
+
+usually we use symbols based on 1) and 2). most common uses: a) hashes (required immutable key in a hash - search time O(n) for string and O(1) for a symbol) b) attr_getter etc. (not required). 
+
+also there are some performance differences between using symbols and strings.

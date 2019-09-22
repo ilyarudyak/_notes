@@ -1,0 +1,81 @@
+Hash functions
+----------------
+
+12.1 Hash function that is suitable for words in dictionary.
+
+12.2 Hash function for the state of chess game.
+
+Maps
+------
+
+(1) 12.3 In an array of strings find closest pair of equal entries.
+
+  - my ideas: (a) create a hash table of indicies: key=word, value=[index0, index1, ...]; (b) in case of collision update closest pair;   
+
+  - solution: they store only last index of a word, not array;
+
+(2) 12.5 In a social network users specify preferences as an array of strings. When reading users, pair them with some previously readed with *same* array of preferences.
+
+  - my ideas: concatenate strings and use them as key; suppose we read a user A and we have a user B with the same key in our hash table - delete user B; otherwise (no B) add A to our hash table; 
+
+  - solution: before concatenation sort strings; in case of small number of attributes use bit array;
+
+(3) 12.7 Anagrams (a -> b by rearranging of letters). Divide dictionary into subsets of anagrams.
+
+  - my solution: sort words and use this is as a key, use vector of words as a value;
+
+(4) 12.8 Check if string can be permuted to form a palindrome (this is different from 12.7!).
+
+  - solution: check if at most one character appears odd # of times; 
+
+  - it seems that they don't check if a palindrome is in the dictionary; can we check? well, we may at least sort string and check if this is in the dictionary; we build a map with key=sort(word), value=vectorOfWords (all words with these letters); we then may check if vectorOfWords contains a palindrome;
+
+  this is instead of making a palindrome from the word or check all of its permutations;
+
+(5) 12.9 Can we prepare a letter L using a text from magazine M? In other words if character 'A' has freq=k in L it should have freq >= k in M.
+
+  - my ideas: we simply calculate freq from both documents and compare them;
+
+  - solution: the main idea is the same; they use additional assumption that M >> L; in this case we build H(L) and then go through H(M) and reduce H(L); if H(L) is empty - stop etc.
+
+more difficult
+----------------
+
+(6) 12.13 A pair of strings is k-suspicious if both of them contains the same k-substring. Find such suspicious substrings.
+
+  - solution: we build hash table key=k-substring, value=listOfString (so multiple entries for each string); if listOfString contains more than one string - we find suspicious substrings.
+
+(7) 12.16 ISBN cache. Implement cache for price lookups based on ISBN using LRU policy (Least Recently Used). 
+
+  - my ideas: we maintain 2 data structures - hash table (key=ISBN, value=price) and priority queue (key=ISBN, value=timestap; we need to update this timestamp);
+
+  - solution: this solution is possible but there are other possibilities - see solution;  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

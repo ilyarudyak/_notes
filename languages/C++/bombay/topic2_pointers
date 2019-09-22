@@ -1,0 +1,73 @@
+session 2
+-----------
+
+  - how do we get addresses - &a;
+  - type of &a - int*;
+  - what value assigned to int* p = &a; address of 1st byte;
+  - pointer to pointer;
+  - * operator;
+  - how many bytes to read? - depends on a type;
+  - can we have deref. of deref.? yes;
+
+session 3
+----------
+
+  - example of programs using pointers;
+
+session 4
+----------
+
+  - swap with pointers and references;
+  - how references is implemented in compiler?
+  - difference between pointers and references;
+  - return of a pointer from function: don't return pointer to local variable; example of programs;
+
+session 5
+----------
+
+  - classical examples for using heap (problems relate to 2 properties of stack: should be allocated at run compile time and be cleared when function finishes its execution): we don't know size of an array on compile time; we have to get access to variable outside of a function; in the first case we have to allocate memory at run time based on some input (calculations); 
+
+  - new operator: int* A = new int[numStudents]; 
+
+    numStudents is determined at runtime; in other words new int[] return pointer to int (int*); A and numStudents will be allocated in stack memory;
+
+  - addresses of array elements are calculated based on address of A[0] (that is stored in int* A) and sizeof(int): 
+
+      address of A[1] = address of A[0] + sizeof(int);
+      address of A[i] = address of A[0] + i * sizeof(int);
+
+  - example of function that returns dinamically allocated array:
+
+    int * readQuizMarks(int n) { 
+
+      int * marks = new int[n];
+      // read marks
+      return marks;
+    }
+
+  - deallocation operator: 
+
+      T* t = new T; delete t;
+      T* t = new T[n]; delete[] t;
+
+sessions 6-9 - structures
+-----------------------
+
+  - can declare array of structure type; dot operator; initializing with { }; copying structures;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

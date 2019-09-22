@@ -1,0 +1,18 @@
+why do we need loaders?
+  - it seems we need them for: a) do work in background and b) manage lifecycle of activity; next step will be to understand how exactly do they manage it;
+
+what are the main classes?
+  - LoaderManager (initialize a Loader, restart that Loader etc.), LoaderCallbacks (3 main methods) and Loader (we have only one concrete implementation - CursorLoader, designed to perform queries on a ContentProvider);
+
+what is going on with notifications?
+  - it seems that CursorLoader already registered ContentObserver, so we have only add notification in our content provider;  
+  - also we don't need a flag to register content observer in SimpleCursorAdapter constructor;
+
+how to set up loader?
+
+  - initialize a loader with a given id;
+  - override 3 methods of LoaderCallbacks: 
+
+      onCreateLoader() - create loader;
+      onLoadFinished() - time to update UI like call swapCursor();
+      onLoaderReset() - clear adapter (not clear when this is called);

@@ -1,0 +1,49 @@
+plugins
+--------
+
+- Writing your tasks to build[br]a Java project would be a huge pain. Especially if we wanted to[br]make sure it was all portable. 
+- Thankfully, my colleagues at Gradle, as well as hundreds of[br]community contributors have developed a huge number of plugins[br]that define useful tasks for you.
+- We don't have to write a single[br]task to build a Java project. We just need to import[br]the task from the Java plugin.
+- Gradle plugins capable of: a) Extending the Gradle domain model; b)Adding DSL elements; c) Adding tasks; d) Adding tasks types etc.
+
+java plugin - build
+--------------------
+
+- defaults: source code under src/main/java etc.
+- information: gradle user guide ch. 4, 23
+- tasks: assemble, build, jar, check, etc.; usually we use build (includes assemble and check, so assemble does not run tests); 
+
+java plugin - dependencies
+---------------------------
+
+- main method to declare dependencies - use cloud repository like mavenCentral:
+
+  repositories {
+    mavenCentral()
+    ...
+  }
+
+- to actually declare dependency use dependencies task:
+
+  dependencies {
+    compile 'com.google.guava:guava:18.0'
+    ...
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

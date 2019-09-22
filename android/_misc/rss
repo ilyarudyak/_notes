@@ -1,0 +1,69 @@
+from here: http://www.w3schools.com/xml/xml_rss.asp
+
+elements
+-----------
+
+  - <channel>: <category>, <cloud>, <image>
+  - <item>: <enclosure>, <guid>, <source>
+
+  - The <category> element specifies one or more categories the channel or item belongs to. The <category> element can also specify the hierarchic location in a category (the value of the <category> element is then a forward-slash separated string).
+
+    <channel>
+      ...
+      <category>IT/Internet/Web development</category>
+
+  - The <enclosure> child element allows a media-file to be included with an item. The <enclosure> element has three required attributes:
+
+    (a) url - Defines the URL to the media file
+    (b) length - Defines the length (in bytes) of the media file
+    (c) type - Defines the type of media file
+
+
+    <enclosure  url="http://www.w3schools.com/xml/rss.mp3"
+                length="5000" type="audio/mpeg" />
+
+  - The <image> child element allows an image to be displayed when aggregators present a feed. The <image> element has three required child elements:
+
+    (a) <url> - Defines the URL to the image
+    (b) <title> - Defines the text to display if the image could not be shown
+    (c) <link> - Defines the hyperlink to the website that offers the channel
+
+    <image>
+      <url>http://www.w3schools.com/images/logo.gif</url>
+      <title>W3Schools.com</title>
+      <link>http://www.w3schools.com</link>
+    </image>
+
+  - The <cloud> element is used to register processes with a cloud to be notified immediately of updates of the channel.
+
+    <channel>
+      ...
+      <cloud  domain="www.w3schools.com" port="80" path="/RPC"
+              registerProcedure="NotifyMe" protocol="xml-rpc" />
+
+  - The <guid> element defines a unique identifier for the item. GUID = Globally Unique Identifier.
+
+    <guid>http://www.w3schools.com/xml/item0768</guid>
+
+  - The <source> element Specifies a third-party source for the item.
+
+    <source url="http://www.w3schools.com">W3Schools.com</source>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

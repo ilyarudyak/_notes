@@ -1,0 +1,40 @@
+intro
+-------
+
+- A style is a collection of properties that specify the look and format for a View or window. A style can specify properties such as height, padding, font color, font size, background color, and much more. 
+
+Styles in Android share a similar philosophy to cascading stylesheets in web design—they allow you to separate the design from the content.
+
+- A theme is a style applied to an entire Activity or application, rather than an individual View (as in the example above). When a style is applied as a theme, *every View* in the Activity or application will apply each style property that it supports.
+
+inheritance
+--------------
+
+- The parent attribute in the <style> element is optional and specifies the resource ID of another style from which this style should inherit properties. You can then *override* the inherited style properties if you want to.
+
+- The parent attribute in the <style> element lets you specify a style from which your style should inherit properties. You can use this to inherit properties from an existing style and then define only the properties that you *want to change* or add. You can inherit from styles that you've created yourself or from styles that are built into the platform.
+
+- If you want to inherit from styles that you've defined yourself, you DO NOT have to use the parent attribute. Instead, just prefix the name of the style you want to inherit to the name of your new style, separated by a period. (That's what we see in XYZ Reader?).
+
+applying
+---------
+
+- There are two ways to set a style:
+
+  (a) To an individual View, by adding the style attribute to a View element in the XML for your layout.
+  (b) Or, to an entire Activity or application, by adding the android:theme attribute to the <activity> or <application> element in the Android manifest.
+
+-  If a style is applied to a ViewGroup, the child View elements will not inherit the style properties—only the element to which you directly apply the style will apply its properties. 
+
+
+
+
+
+
+
+
+
+
+
+
+

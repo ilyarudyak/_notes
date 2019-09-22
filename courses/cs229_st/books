@@ -1,0 +1,22 @@
+1) Learning From Data 4.6/80
+
+  - very short intro (basically only linear model), accompanied by lectures on youtube and edx (?); but seems useful for understanding first principles;
+
+2) Machine Learning - A Probabilistic Perspective (Murphy) 3.9/46
+
+  - 1000p.+, intermediate-to-advanced text based on probability theory, Google engineer and postdoc in MIT;
+
+3 standard intro texts
+------------------------
+
+3) Pattern Recognition and Machine Learning (Bishop) 4.1/114
+
+  - the same as Murphy, but more approachable; author seems to work in Microsoft; classical text;
+
+4) Pattern Classification (Duda) 3.7/37
+
+  - also classical text and *recommended to cs229* (but less popular than Bishop); also based on probability; seems to have matlab section;
+
+5) Machine Learning (Mitchell) 4.2/52
+
+  - 1997 classical text; *recommended to cs229*;

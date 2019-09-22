@@ -1,0 +1,24 @@
+from this post: http://android-developers.blogspot.ru/2014/10/whats-new-in-android-50-lollipop.html
+
+ui
+---
+
+- material design;
+- notificayions on lock screen and on the top of the screen;
+- concurrent document in overview (multiple tabs from the same app like multiple chats - that's what i switched off in chrome);
+
+performance
+-------------
+
+- new android runtime (instead of Dalvik?); 
+- 64-bit support;
+- new tools and APIs to build battery efficient apps; JobScheduler;
+- and more;
+
+other
+------
+
+- new APIs for watches, auto and TV;
+- work profiles etc. for business use;
+- new camera API;
+- and more;

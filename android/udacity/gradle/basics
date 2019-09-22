@@ -1,0 +1,13 @@
+- The default naming convention for a Gradle build script is build.gradle. When executing the command gradle in a shell, Gra- dle looks for a file with that exact name.
+
+- doLast(): An action named doLast is almost self-expressive. It’s the last action that’s executed for a task. Gradle allows for specifying the same logic in a more concise way. The left shift operator << is a shortcut for the action doLast.
+
+- One of Gradle’s productivity tools is the ability to abbreviate camel-cased task names on the command line. If you wanted to run the previous example in the abbreviated form, you’d just have to type gradle yG0 gT.
+
+commands & options
+--------------------
+
+- -q option - quiet output;
+- tasks - list of all tasks of a project;
+- -b The default naming convention for Gradle build script is build.gradle. Use this option to execute a build script with a different name.
+

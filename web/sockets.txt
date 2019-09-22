@@ -1,0 +1,11 @@
+- Sockets are computer networking data structures that embody the concept of the “communication endpoint,” described in the previous section. Net- worked applications must create sockets before any type of communica- tion can commence. They can be likened to telephone jacks, without which, engaging in communication is impossible.
+
+- There are two types of sockets: file-based and network-oriented. Unix sockets are the first family of sockets we are looking at and have a “family name” of AF_UNIX (both processes run on the same computer, these sockets are file-based). The second type of socket is networked-based and has its own family name, AF_INET, or address family: Internet. 
+
+- If a socket is like a telephone jack—a piece of infrastructure that enables communication—then a hostname and port number are like an area code and telephone number combination. 
+
+- There are two different styles of socket connections. The first type is connection-oriented.
+
+- The first type is connection-oriented. What this means is that a connection must be established before communication can occur, such as calling a friend using the telephone system. This type of communication is also referred to as a virtual circuit or stream socket. The primary protocol that implements such connection types is the Transmission Control Protocol (better known by its acronym, TCP).
+
+- In stark contrast to virtual circuits is the datagram type of socket, which is con- nectionless. This means that no connection is necessary before communica- tion can begin. Here, there are no guarantees of sequencing, reliability, or non- duplication in the process of data delivery. The primary protocol that implements such connection types is the User Datagram Protocol (better known by its acronym, UDP).

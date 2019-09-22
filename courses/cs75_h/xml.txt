@@ -1,0 +1,27 @@
+xml tags
+----------
+
+- <![CDATA[ ... ]. CDATA stands for (unparsed) Character Data, meaning that the CDATA content will not be interpreted by the XML processor. This is *opposed* to PCDATA, which stands for Parsed Character Data. 
+
+Common uses for the CDATA section are to enclose HTML and JavaScript so that they are not parsed by the XML processor.
+
+- predefined entities. There are many letters and symbols that can be inserted into HTML documents by using entities. In XML, however, there are only *five* predefined entities. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

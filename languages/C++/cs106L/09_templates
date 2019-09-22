@@ -1,0 +1,72 @@
+
+  - what to use: class or typename? In this instance,typename and class are completely equivalent to one  another. However,I find the use of class misleading because it incorrectly implies that the parameter must be a class type. This is not the case – you can still instantiate templates that are parameterized using class with primitive types like int ordouble. From here on out,we will use typename instead of class.
+
+    template <typename One, typename Two> struct MyPair {
+        One first;
+        Two second;
+    };
+
+    template <class One, class Two> struct MyPair {
+        One first;
+        Two second;
+    };
+
+  - when to repeat template<...>? if we define a function outside of a class; we don't need this declaration if we define it *inside* a class;
+
+    template <typename FirstType, typename SecondType> class MyPair {
+    public:
+        FirstType getFirst() {
+            return first;
+        }
+        ...
+    }
+
+  - where should we put class implementation? it seems we have to put it into header file. why? don't really understand, but smt related to compiler once again (after class brackets but before #endif).
+
+  - when we use dependent types for types with templetes we need to add typename (this is ackward and a source for mistakes):
+
+    // here iterator is a dependent type
+    typename deque<T>::iterator begin();
+    typename deque<T>::iterator end();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

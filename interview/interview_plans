@@ -1,0 +1,31 @@
+recursion
+-----------
+
+(1) cs 106B
+    - maze (shortest path) DONE
+    - pset3 (misc recursive problems)
+    - pset4 boggle DONE
+    - sudoku solver (see lectures) DONE
+(2) problems from CTCI
+(3) problems from course reader (3-5)
+
+CTCI 
+------
+
+  when: June-July
+
+  main problems:
+    (1) ch. 5 bits
+    (2) ch. 11 sort
+    (3) ch. 14 java
+    (4) ch. 15 databases
+    (5) ch. 16 threads and locks
+
+  design and testing:
+    (1) ch. 8 OOP
+    (2) ch 12. testing
+
+  math and brain teasers:
+    (1) ch. 6 brain teasers
+    (2) ch. 7 math
+

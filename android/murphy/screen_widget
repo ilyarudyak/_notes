@@ -1,0 +1,5 @@
+how to create a screen widget?
+  1) add a broadcast receiver to manifest with some specific features;
+  2) add a layout (there are some restictions on what we can use here);
+  3) create Broadcast Receiver; we use its subclass AppWidgetProvider and prinarily override onUpdate();
+  4) in order to use onUpdate() we have to create those RemoteViews; the mechanism is slightly different from the one we usually use for creating views;

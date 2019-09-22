@@ -1,0 +1,11 @@
+(1) what is immutable class in java?
+
+  - 
+
+(2) how Array is implemented? is it a class?
+
+  - Now that you know about classes, an important point can be made about arrays: they are implemented as objects. 
+
+  - Because of this, there is a special array attribute that you will want to take advantage of. Specifically, the size of an array—that is, the number of elements that an array can hold—is found in its length instance variable. 
+
+  - And it seems that this is the only method of this class. Also some methods overriden from Object class. For example we have toString(), but it's not useful - so use Arrays.toString() instead.

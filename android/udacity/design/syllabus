@@ -1,0 +1,57 @@
+lesson1: density, layouts, styles;
+lesson2: surfaces, cards, FAB, touch, scrolling;
+lesson3: colors, fonts, images;
+lesson4: see the file for lesson;
+lesson5: 
+
+
+lesson2
+
+  - SimplePaperTransformations - transform list entry in RecyclerView on click;
+
+  - ScrollEventsDemo - collapsible toolbar (see additional documentation in instructor notes);
+
+  - DynamicSurfacesDemo - collapsible toolbar with image (parallax scrolling);
+
+  - FabDemo - construct FAB from ImageButton;
+
+lesson 3
+
+  - MD_Typograhical_Scale - material design text sizes;
+
+  - ImmersiveImages - scaleType attribute in android;
+
+  - ApplyPaletteDemo - add palette to app theme;
+
+  - PickPalette - palette library to pick a color;
+
+lesson 4
+
+  - InterpolationDemo 
+
+  - L4_06_Q - animation in RecyclerView;
+
+  - TransitionDemo - demo about Transitions framework of KitKat;
+
+  - Unsplash - shared element transition in gallery;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

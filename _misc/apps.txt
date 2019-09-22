@@ -1,0 +1,76 @@
+## screen 1
+- weather
+- calendar
+- clock
+- music
+- camera
+- photos
+- safari
+- translate
+- dropbox
+- google keep
+- gett
+- coursera
+- edx
+- gmail
+
+## screen 2
+- cnn
+- bloomberg
+- OK
+- facebook
+- skype
+- nytimes
+- twitter
+- formula 1
+- us open
+- sportbox
+- the guardian
+- washington post
+- NBC news
+- TED
+- Netflix
+- AO
+- Eurosport player
+- Outlook
+
+## screen 3
+- drive
+- name play
+- monkey math
+- monkey adventure
+- seuss ABC
+- cat in the hat
+- remote
+- bus
+- 3 little pigs
+- preschool
+
+## screen 4
+- settings
+- app store
+- calculator
+- flickr
+- google photos
+- yandex maps
+- yandex metro
+- TV
+- Tripit
+- Y. weather
+- BONECO
+- Camera 360
+- YouCamPerfect
+- TripAdvisor
+- ELSA Speak
+
+## screen 5
+- YOOX
+- Farfetch
+- KupiVIP
+- Горздрав
+- Аптека Мос
+- Юла
+- Азбука Вкуса
+- Вкусомания
+- Здоров.ру
+- RendezVouz

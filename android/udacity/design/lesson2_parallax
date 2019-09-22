@@ -1,0 +1,31 @@
+what is it layout?
+
+  CoordinatorLayout
+
+    AppBarLayout
+
+      CollapsingToolbarLayout
+
+        ImageView // so it's outside of Toolbar
+
+        Toolbar
+
+    ScrollView // works with additional flag
+
+steps to make scrolling Toolbar:
+
+  (1) wrap content in NestedScrollView and add attr app:layout_behavior="@string/appbar_scrolling_view_behavior" - it prevent overlapping of content and Toolbar;
+  (2) add app:layout_scrollFlags="scroll|enterAlways" - to get scrolling behavior of Toolbar;
+
+steps to make collapsing Toolbar:
+
+  (1) wrap Toolbar in CollapsingToolbarLayout inside of AppBarLayout;
+  (2) add scrolling flags to CollapsingToolbarLayout (instead of Toolbar);
+  (3) add android:layout_height="192dp" to AppBarLayout (and Toolbar should have android:layout_height="?actionBarSize")
+  (4) pin toolbar;
+
+steps to make parallax effect:
+
+  (1) add image as background; CollapsingToolbarLayout is inherited from FrameLayout so we just add <ImageView>;
+  (2) add app:layout_collapseMode="parallax" to ImageView;
+  (3) add app:contentScrim="?attr/colorPrimary" - otherwise we'll see collpsed image, not plain color;

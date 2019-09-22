@@ -1,0 +1,16 @@
+
+  - main methods to write:
+
+    (a) setValue() - main method
+    (b) updateChildren()
+    (c) push() - generate unique ids
+    (d) runTransaction()
+    (e) removeValue()
+
+  - main listeners:
+
+    (a) addValueEventListener() - single data
+    (b) addChildEventListener() - when workin with lists
+    (c) addListenerForSingleValueEvent() - reading data once
+
+  - remove values with removeValue();

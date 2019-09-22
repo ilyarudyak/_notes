@@ -1,0 +1,42 @@
+  (1) using a single array to implement 3 stacks:
+
+      - my ideas: just take an array of length 3n and use each slot for a stack; then double size of an array to 6n (when space is not available for at least one stack); then copy data 3n -> 6n on appropriate positions; other solutions are more flexible but also more comlex;
+
+      - solution: indeed this is the simplest solution; if we have any info in advance we may change sizez of slots in the array; other solutions are not appropriate for interview;
+
+  (2) design a stack with *min* operation in O(1):
+
+      - my ideas: just keep instance variable min and update it when push items; but what do we do with pop()? so it seems we have to augment node to keep up with it: add to node min of elements that are *below* in stack; it's implemented and tested;
+
+      - solution: (a) augmenting is correct; it seems we can store not min *below* element but min including element data; (b) we may store min in a separate stack (be sure to use <= when appropriate, not <);
+
+  ->  be sure to check more difficult code from problems 1 and 3 later;
+
+  (4) towers of hanoi - implement using stacks.
+
+  (5) implement queue with 2 stacks:
+
+      - my ideas: push to A; when we need to pop - move everything except last element to B; now we have options: (a) we may move everything back or (b) pop from B until it empty and then repeat;
+
+      - solution: is close enough to my ideas;
+
+  (6) sort a stack:
+
+      - my ideas: implement "selection sort"; say we have sorted elements in A and other elements in B; get min in B moving elements to A, then move elements back (except min) and push min to A; we have to maintain count of number of elements in B (or some other count);
+
+      - solution: implement "insertion sort"; again we have A and B with sorted elements in A; insert top element from B to appropriate position in A (moving elements from A to B - these elements will be bigger than we move from B now, and will be moved on the next step); then repeat - that's it; no counting of elements; 
+
+  (7) cats and dogs:
+
+      - my ideas: just maintain 3 queues for cats, dogs and both of them; we enqueue to 2 of 3 queues and deque also from 2 of 3 queues; in this case we have to iterate through big queue;
+
+      - solution: it seems there are a lot of possible solutions to this problem; (a) we can use a single queue, but we have to iterate; (b) again we can augment Node to save a timestamp; then we peek from both queues and return the animal with earlier timestamp;
+
+
+
+
+
+
+
+
+

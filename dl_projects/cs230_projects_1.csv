@@ -1,0 +1,51 @@
+title,area,subarea
+Pneumonia Classification,Computer Vision,Medicine
+Automating Melanoma Segmentation,Computer Vision,Medicine
+A Survey of Deep CNNs for Mouse Paw Localization,Computer Vision,Biology
+Language Translation using RNNs,NLP,Machine Translation
+Workflow Recognition in Cholecystectomy,Computer Vision,Medicine
+Chest X-Ray Screening,Computer Vision,Medicine
+CheXDualNet: A View-Specific Approach to Chest Pathology Classification,Computer Vision,Medicine
+U-Net-Based Architectures for Medical Image Segmentation,Computer Vision,Medicine
+Future Prediction in Brownian Dynamics Simulations Using Deep Neural Networks,Computer Vision,Physics
+Boosting MRI Quality with Deep Learning,Computer Vision,Medicine
+Computer Vision: Using Satellite images to infer AQI in different regions,Computer Vision,Meteorology
+Differentiable Protein Loop Detector,Computer Vision,Biology
+Trajectory Prediction with Deep Learning,Computer Vision,Autonomous Driving
+FIFA Player Analysis,Miscellaneous,Sport
+Knowledge Base Construction from Richly Formatted Data to Extract Selected Financial Information from SEC Filings,NLP,Economics
+Speaker Identification in Noisy Environment,NLP,Speech Recognition
+Photoshop Detection Using Machine Learning,Computer Vision,Photography
+CAPTCHA Breaking,Computer Vision,Security
+Depth Prediction,Computer Vision,Robotics
+CopyCat,Computer Vision,Robotics
+Chess Vision: Transcribing Chess Positions,Computer Vision,Games
+Celebrity and You Synthesis,Miscellaneous,GANs
+Super Resolution for sporting events,Computer Vision,Photography
+Tampering Image Detection for Online Fake News,Computer Vision,News
+Deep Learning Implementation of a Recommendation System for Restaurants,Miscellaneous,Recommendation System
+Lane Detection with Lite SegNet,Computer Vision,Autonomous Driving
+Attacking Autonomous Driving ML Algorithms with Adversarial Examples,Computer Vision,Autonomous Driving
+Detecting Toxicity in Online Forums,NLP,Text classification
+Typing Biometrics for User Authentication - a One-Shot Approach,Computer Vision,Security
+Project Refeed: nutrition tracker,Computer Vision,Nutrition
+Fine-Grained Computer Vision for Vehicle Makes and Models using Convolutional Neural Networks (CNNs),Computer Vision,Autonomous Driving
+Xceptional Landmark Recognition,Computer Vision,Autonomous Driving
+Computer Vision Aided Fire Localization for Wildfire Monitoring,Computer Vision,Meteorology
+Mental Health - Predicting Stress in the Tech Industry,NLP,Sentiment Analysis
+Predicting the rating of a company using employee reviews,NLP,Sentiment Analysis
+Image Caption Generation with a Sequence-to-Sequence Model,Computer Vision,Image Captioning
+Deep Affinity Networks for Multiple Object Tracking,Computer Vision,Autonomous Driving
+Multi-task Deep Network for Ophthalmology Screening on Fundus Images,Computer Vision,Medicine
+Content Recognition in Surgical Videos,Computer Vision,Medicine
+Chest x-ray diagnosis with deep learning CNN models and Computer Vision,Computer Vision,Medicine
+Detecting Brain Tumors in Low Quality Magnetic Resonance Images,Computer Vision,Medicine
+Improved Reliability using Data Augmentation,Computer Vision
+Deep RNNs for Non-Linear State Estimation,Computer Vision,Autonomous Driving
+Using Deep Learning to Predict Toxicity and Lipophilicity from Molecular Fingerprints and 2D Structures,Computer Vision,Medicine
+Probabilistic and Multimodal Trajectory Predictions for Autonomous Driving,Computer Vision,Autonomous Driving
+Sign Language Recognition and Transcription with Neural Networks,Computer Vision
+Predicting Effective Customer Touchpoint,Miscellaneous,Marketing
+State-of-the-Art: End-to-End Deep Learning for Art Appraisal,Computer Vision,Art
+Deep Attentive Neural Models for Algorithmic Trading,Miscellaneous,Trading
+Sound Source Separation via Deep Neural Networks,NLP,Speech Recognition

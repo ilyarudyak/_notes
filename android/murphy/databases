@@ -1,0 +1,16 @@
+what is ContentResolver?
+  - it seems we can not simply query ContentProvider, so we have to use this class;
+
+how do we get info using ContentResolver?
+  - we use methods like query() and async task; in case of SELECT * FROM we provide Uri and list of variables (so called projection);
+
+what are other methods to get info from provider?
+  - we may also use CursorLoader; it seems we use it in sunshine;
+
+what are the major classes related to db (in android)?
+
+  - SQLiteDatabase: the database itself;
+  - SQLiteCursor: the cursor that we get from query;
+  - SQLiteQueryBuilder: to build and execute queries;
+  - SQLiteStatement: ???
+  - SQLiteOpenhelper: we create db using this clss

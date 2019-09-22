@@ -1,0 +1,102 @@
+the problem
+-------------
+
+  - how do we copy a vector in the following statement? we use: (a) copy constructor and (b) assignment operator;
+
+    // this is *copy*, not pointer assignment
+    vector<int> two = one;
+
+  - when do we initialize object and when assign? 
+
+initialization and assignment
+-------------------------------
+
+    initialize: (1) when create and (2)(3) when pass/return to/from a function as a copy (not reference). 
+
+    assign: only (1) when object is created and we assign new value;
+
+      MyClass one, two;
+      two = one;
+
+  - what is the difference between initialization and assignment? 
+
+    However, assignment and initialization are *fundamentally* different operations. 
+
+    When initializing a new object as a copy of an existing object, we simply need to copy the existing object into the new object. When assigning an existing object a new value, the existing object's value ceases to be and we must make sure to *clean up any resources* the object may have allocated before setting it to the new value. 
+
+    In other words, initialization is a straight copy, while assignment is cleanup followed by a copy. This distinction will become manifest in the code we will write for the copy functions later in this chapter.
+
+  - how do we perform this operations?
+
+    (a) initialization: we use copy constructor;
+
+    (b) assignment: we use assignment operator;
+
+    class MyClass {
+    public:
+        MyClass();
+        ~MyClass();
+        MyClass(const MyClass& other); // Copy constructor
+        MyClass& operator = (const MyClass& other); // Assignment operator
+        /* ... */
+    };
+
+  - default behavior. in many cases C++ provides these operations but sometimes not. example: when we have a pointer as a member variable C++ makes only shell copy (not deep copy);
+
+
+  ***********The Rule of Three************ 
+  
+  If a class has any of the following three member functions: 
+
+    • Destructor
+    • Copy Constructor
+    • Assignment Operator
+
+  Then that class should have all three of those functions.
+
+  *****************************************
+
+conversion operations
+-----------------------
+
+  - we don't have to define additional "conversion assignment operation"; 
+
+  suppose we have MyString class with conversion constructor from char*. what is going on when we call:
+
+    MString myCString;
+    // this is assignment and it doesn't define for char*
+    myCString = "This is some string!"; 
+
+  conversion constructor will be invoked automatically:
+
+    // MyString(char*) - conversion constructor
+    myCString.operator =(MyString("This is a C string!"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+syllabus:
+
+  - intro to animation in android -TODO
+  - transitions (3-6) -DONE
+  - animation in lollipop (7-8) -TODO
+  - shared element transition (12-13) -TODO
+  - instructive motion (14-15); when image is open in full and then hided with text; -NO APP
+  - tips on animation (16); -DONE
+  - interpolation demo (17); -DONE
+  - coordinated transition (18); -NO APP
+  - animating details (21-23);
+
+  -quizzes 09-10, 19-20
+
+
+questions
+------------
+
+  - do we animate details with vector drawables? or there is other way?
+
+todo
+------
+
+  - intro to animation in android -TODO
+  - animation in lollipop (7-8) -TODO
+  - shared element transition (12-13) -TODO  
+
+
+tips on animation
+-------------------
+
+  - timing 300ms;
+  - timing depends on distance;
+  - *no linear motion in real life*, so use interpolation;
+  - add motion on click;

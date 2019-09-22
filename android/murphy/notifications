@@ -1,0 +1,28 @@
+main
+-------
+
+DownloadNotify - simple notification
+BigNotify
+
+Stacked - stack a few notifications into one
+
+Foreground - notifications of foreground service
+
+
+advanced
+---------
+
+WearActions - on wearables
+VoiceInput
+Pages
+BigLocal
+
+Lollipop - lockscreen, heads-up
+LollipopNonCompat
+FullScreen
+
+HCNotifyDemo - custom ticker
+
+Progress - progress bar
+
+Ordered - not mentioned

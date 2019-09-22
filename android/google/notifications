@@ -1,0 +1,22 @@
+how to create a notification?
+  1) build notification (icon, title etc.) using Notification.Builder; 
+  2) create intent or pending intent - if we're going to open smt on click; and add this intent to buider;
+  3) create notification using system Notification Manager;
+
+notification action
+---------------------
+
+- An action takes users directly from the notification to an Activity in your application, where they can look at the event that caused the notification or do further work. 
+
+- Inside a notification, the action itself is defined by a PendingIntent containing an Intent that starts an Activity in your application.
+
+questions
+-----------
+
+- small vs large icons;
+
+why do we need notification id?
+  - it seems we can change notification afterwards;
+
+how to cancel a notification?
+  - usually we use setAutoCancel();

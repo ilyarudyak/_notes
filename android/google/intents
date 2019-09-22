@@ -1,0 +1,24 @@
+- startActivity() can be an implicit intent; for example we start google maps with startActivity();
+- we have only 3 types of intents: startActivity(), startService() and sendBroadcast() (with some variations);
+- there is no "share" intent; this is standard implicit intent with action ACTION_SEND;
+
+how to build an intent:
+
+  - component name/action;
+  - data (URI and type) - do not confuse with extras;
+  - category (?);
+  - extras; Just as some actions use particular kinds of data URIs, some actions also use particular extras. For example, when creating an intent to send an email with ACTION_SEND, you can specify the "to" recipient with the EXTRA_EMAIL key, and specify the "subject" with the EXTRA_SUBJECT key.
+  - flags;
+
+pending intent:
+----------------
+
+- A PendingIntent object is a wrapper around an Intent object. The primary purpose of a PendingIntent is to grant permission to a foreign application to use the contained Intent as if it were executed from your app's own process.
+
+- Major use cases for a pending intent include:
+
+  a) Declare an intent to be executed when the user performs an action with your Notification (the Android system's NotificationManager executes the Intent).
+  b) Declare an intent to be executed when the user performs an action with your App Widget (the Home screen app executes the Intent).
+  c) Declare an intent to be executed at a specified time in the future (the Android system's AlarmManager executes the Intent). 
+
+- use PendingIntent.getActivity() for an Intent that starts an Activity etc.

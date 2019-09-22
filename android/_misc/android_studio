@@ -1,0 +1,13 @@
+popular keyboard  shortcuts
+-----------------------------
+
+  new:
+
+    - cmd + shift + space - smart autocomplete
+    - cmd + p - to get available signatures of a method
+    - cmd + 1 - toggle file browser
+
+  know, but not using:
+  
+    - space - choose highlited version of autocomplete  
+    - cmd + E - recent files

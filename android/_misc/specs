@@ -1,0 +1,13 @@
+http://developer.android.com/guide/practices/screens_support.html
+
+Nexus5
+-------- 
+
+  - 445 dpi or xxdpi (~480dpi); k = 3.0
+  - 1920x1080 or 640x360dp;
+
+Nexus7
+-------
+
+  - 320dpi or xhdpi (~323 dpi); k = 2.0
+  - 1920x1200 or 990x600;

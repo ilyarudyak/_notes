@@ -1,0 +1,20 @@
+why do we use both URI and URL?
+  - well, HttpURLConnection accepts URL but URI has builder;
+
+what fields does URL class have?
+  - URL has variables for scheme, host, query etc.
+
+how to build URL?
+
+  parameters -> Uri.Builder -> Uri -> URL
+  
+  1) we use Uri.Builder (with given baseString): 
+
+      Uri builtUri = Uri.parse(baseString).buildUpon()
+            .appendQueryParameter(...)
+            .build();
+  2) we construct URL from string (we don't have constructor from Uri!):
+
+    URL url = new URL(builtUri.toString());
+
+  

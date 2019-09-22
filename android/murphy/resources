@@ -1,0 +1,14 @@
+how to get String from resource file?
+
+  - context has method getString(int resId), so we call getString(R.string.some_string);
+  - in other xml file we call it like @string/some_string;
+
+how to get InputStream from raw resources and assets?
+
+  - we get Resource object with getResources(); and use openRawResource(int id);
+  - again we have context method getAssets() and then we use open(); but now we use name of the file in assets folder, not int id;
+
+difference btw assets and res
+
+  - One benefit of using assets over raw resources is the file:///android_asset/ Uri prefix. You can use this to load an asset into a WebView.
+

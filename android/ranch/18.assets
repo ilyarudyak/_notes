@@ -1,0 +1,21 @@
+(1) create BeatBoxFragment fragment
+
+  - it will be a dynamic fragment; we use static method to create fragment:
+
+      public static BeatBoxFragment newInstance() {
+        return new BeatBoxFragment();
+      }
+
+  - it contains RecyclerView; (a) add support library for RecyclerView into Gradle file; (b) create 2 layout files: for item and for fragment itself; (c) create java file for fragment;
+  - xml: item. just Button (or wrappe it into FrameLayout);
+  - xml: fragment. just android.support.v7.widget.RecyclerView.
+  - java: we use GridLayoutManager with 3 colums; we use recyclerView.setLayoutManager(manager) in onCreateView();
+
+  (2) working with assets
+
+    - create special class BeatBox; 
+    - add AssetManager instance variable mAssets; get it from context in constructor:
+
+      public BeatBox(Context context) {
+        mAssets = context.getAssets();
+      }

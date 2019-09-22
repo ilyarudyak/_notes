@@ -1,0 +1,24 @@
+from here: http://code.tutsplus.com/tutorials/quick-tip-using-butter-knife-to-inject-views-on-android--cms-23542
+
+what are its main functions?
+
+  - create views without findViewById(); (including list view - see the tutorial);
+  - create listener without inner class;
+
+how to eliminate findViewById()?
+
+  - add this code instead of usual declaration:
+
+    @InjectView(R.id.sample_textview)
+    TextView sample_textview;
+
+  - add ButterKnife.inject(this) in onCreate() (or slightly different method in fragments);
+
+how to eliminate anonymous classes in listener?
+
+  - the approach is similar to what we have if declare onClick in xml file:
+
+    @OnClick(R.id.sample_textview)
+    public void showToastMessage(){
+      Toast.makeText(MainActivity.this, "This is a message from the activity", Toast.LENGTH_SHORT).show();
+    }

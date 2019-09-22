@@ -1,0 +1,51 @@
+creational
+------------
+
+  (1) abstract factory      X     +
+  (2) builder               X
+  (3) factory method        X     +     X
+  (4) prototype             X     +
+  (5) singleton             X     +     X
+
+structural
+------------
+
+  (1) adapter               X     X     X     IN PROGRESS     
+  (2) bridge
+  (3) composite             X     X     X     DONE
+  (4) decorator             X     X     X     IN PROGRESS
+  (5) facade                X     +     X
+  (6) flyweight             X
+  (7) proxy                       X     X
+
+behavioral
+------------
+
+  (1) chain of respons.
+  (2) command               X     X     X
+  (3) interpreter
+  (4) iterator                          X
+  (5) mediator
+  (6) memento
+  (7) observer              X     X     X
+  (8) state                             X
+  (9) strategy              X     X
+  (10) template                   X     X
+
+  not in gof
+  ------------
+
+  (1) visitor               X 
+  (2) null object           X
+
+
+----------------
+  - first X - Java Interview Guide
+  - second X - O'Reilly Design Patterns (Video)
+  - '+' - without code
+  - third - Head first
+
+
+
+
+

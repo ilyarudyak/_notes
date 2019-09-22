@@ -1,0 +1,58 @@
+also from here: http://developer.android.com/training/multiscreen/adaptui.html
+
+how to determine layout?
+
+  - we may do that by querying if a given view exists and is visible:
+
+    View articleView = findViewById(R.id.article);
+    mIsDualPane = articleView != null && 
+                  articleView.getVisibility() == View.VISIBLE;
+
+  - another example of how you can adapt to the existence of different components is to check whether they are available before performing an operation on them:
+
+    if (catButton != null) {
+      catButton.setOnClickListener(listener);
+    }
+
+how to react on different layout?
+
+  - we may use mIsDualPane or other similar variable in our java code;
+
+how to define boolean (integer) res?
+
+  - see here: http://developer.android.com/guide/topics/resources/more-resources.html; and here: http://stackoverflow.com/questions/16113608/a-boolean-value-defined-in-xml-how-to-reference-in-java
+
+  - we may use bools.xml, but filename is arbitrary; we can include it in other file, say dimens.xml;
+
+    <bool name="enableQAurl">true</bool>
+
+  - in java we call it like this:
+
+    Resources res = getResources();
+    boolean enableQAurl = res.getBoolean(R.bool.enableQAurl);
+
+  - we use the same approach with integers (see the same link); we may change LayoutManager and item layout based on number of columns;
+
+how to use integers in xml?
+
+  - we may use smt like this:
+
+    <GridView 
+      ...
+      android:numColumns="@integer/grid_columns" 
+      ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

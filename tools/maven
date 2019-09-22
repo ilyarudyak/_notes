@@ -1,0 +1,13 @@
+  - how to compile?
+
+    mvn compile
+
+  - how to run? see here:http://stackoverflow.com/questions/9846046/run-main-class-of-maven-project
+
+    mvn exec:java -Dexec.mainClass="com.example.Main"
+
+  - how to run single test method? http://stackoverflow.com/questions/1873995/run-a-single-test-method-with-maven
+
+    mvn -Dtest=TestCircle#xyz test
+
+    where TestCircle is the test class name and xyz is the test method.

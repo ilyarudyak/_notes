@@ -1,0 +1,24 @@
+1. Data Structures and Algorithms
+    1.6. Mapping Keys to Multiple Values in a Dictionary
+    1.8. Calculating with Dictionaries
+    1.12. Determining the Most Frequently Occurring Items in a Sequence
+    1.15. Grouping Records Together Based on a Field
+    1.18. Mapping Names to Sequence Elements
+2. Strings and Text
+3. Numbers, Dates, and Times
+    3.11. Picking Things at Random
+4. Iterators and Generators.
+    4.11. Iterating Over Multiple Sequences Simultaneously
+5. Files and I/O
+6. Data Encoding and Processing
+7. Functions
+    7.8. Making an N-Argument Callable Work As a Callable
+with Fewer Arguments
+8. Classes and Objects
+9. Metaprogramming
+10. Modules and Packages
+11. Network and Web Programming
+12. Concurrency
+13. Utility Scripting and System Administration
+14. Testing, Debugging, and Exceptions
+15. C Extensions

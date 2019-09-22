@@ -1,0 +1,8 @@
+what is actually SharedActionProvider?
+  - well, we can use a button and intent but we have here for free: a) custom layout (like with search field for search button) and b) menu for actions (so we can choose our action immediately, not when intent is executed);
+
+how to implement it?
+
+  1) we mention its class in xml file;
+  2) we create shared intent (so again - this is just a wrapper for an intent);
+  3) we request for an instance of provider (it seems this instance is created based on xml file) and supply it with intent;

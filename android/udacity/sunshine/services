@@ -1,0 +1,22 @@
+- We've already introduced a) Activities, b) Content Providers, c) Broadcast Receivers and d) Intents. e) Services, are the final piece to the Android app component puzzle.
+
+how to start
+--------------
+
+- You start services much like you do activities, by passing in an intent to a Start Service call. And you can stop services the same way, by calling Stop Service and passing in the name of the service you want to stop.
+
+priority and life cycle
+-------------------------
+
+- Unlike activities, services have no user interface and they run at a *higher priority* than background activities. This means that an app with a running service is less likely to be killed by the run time, in order to free resources for the foreground activities. 
+
+In fact, by default, the system will attempt to restart services that are terminated before they are stopped from within the app.
+
+- This is reflected in the simplified life cycle. a) onCreate(); b) onStartCommand(); c) onDestroy();
+
+intent service
+----------------
+
+- It's also important to note that like activities and receivers, services run on the main thread. So you'll need to use a background thread or a think task to execute the long running tasks you wish to do within your service. To make life easier, you can use the intent service class. Which implements the most common best practice pattern, for using intents, which are executed within a service.
+
+- In practice there's often a framework alternative to rolling your own service implementation. Whether that be an a) intent service for executing background tasks or b) the sync adapter which you'll learn about later in this lesson. Perfect for performing background data synchronization.

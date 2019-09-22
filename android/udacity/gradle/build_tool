@@ -1,0 +1,11 @@
+Anatomy of a build tool
+-------------------------
+
+1) build file - contains tasks and their dependencies; contains external dependencies; usually written in scripting language (so it's called build script);
+2) some tasks may use input (including output of other tasks), produce output;
+3) build engine - an engine that actually performs tasks;
+4) dependency manager - resolves external dependencies (usually in form of jars);
+
+- build script consists of three basic elements: the project, multiple targets, and the used tasks; 
+- task is a piece of executable code — for example, for creating a new directory or moving a file;
+- gradle ships with a wide range of predefined tasks, you can extend your build script’s capabilities by writing your own task;

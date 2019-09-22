@@ -1,0 +1,79 @@
+pixels
+---------
+
+1) physical dimensions: a) screen size - inches in diagonal; b) physical pixels per inch (dpi); c) resolution - ## of pixels; NOT used; (as I understand - dips is resolution / area);
+2) density-independent pixels (dp or dip): 
+
+  px = dp * (dpi / 160)
+
+  in other words, 1dp = 1px on 160dpi device; and 1dp = 1.5px on 240dpi device; the bigger device - the bigger ## of pixels in dp;  
+
+screen sizes
+-------------
+
+  - old sizes: small, normal (3-5), large (5-7), and xlarge (>= 7); so there are a lot of problems with that; see a picture on DAC;
+
+  - from sunshine: a) phone <= 600dp; nexus 5 has 1920x1080; we use the smaller side: 1080 / 3 = 360dp; b) 7" tablet >= 600dp; c) 10" tablet > 720dp;
+
+dpi
+----
+
+  ldpi (low) ~120dpi
+  mdpi (medium) ~160dpi
+  hdpi (high) ~240dpi
+  xhdpi (extra-high) ~320dpi
+  xxhdpi (extra-extra-high) ~480dpi
+  xxxhdpi (extra-extra-extra-high) ~640dpi
+
+  what dpi does nexus5 have?
+    - 445dpi so it's in xxhdpi group; 1dp = 3px;
+
+density independence
+-----------------------
+
+This means that the object will have the same physical size on different devices (se a picture on DAC).
+
+The Android system helps your application achieve density independence in two ways:
+
+  - The system scales dp units as appropriate for the current screen density;
+  - The system scales drawable resources to the appropriate size, based on the current screen density, if necessary;
+
+In most cases, you can ensure density independence in your application simply by specifying all layout dimension values in density-independent pixels (dp units) or with "wrap_content", as appropriate.
+
+However, bitmap scaling can result in blurry or pixelated bitmaps, which you might notice in the above screenshots. 
+
+how to support multiple screens
+---------------------------------
+
+The sustem can do most of the work, but you can also:
+
+  1) declare in manifest what devices do you support; 
+  2) provide a) different layouts (we use w600dp qualifier (so we use screen size)) and b) different bitmaps (we use mdpi etc.)
+
+- we may also use land and port and some other qualifiers; we use drawable for bitmap and mipmap only for icon;
+
+Be aware that, when the Android system picks which resources to use at runtime, it uses certain logic to determine the "best matching" resources. That is, the qualifiers you use don't have to exactly match the current screen configuration in all cases in order for the system to use them.
+
+how to scale drawables?
+-------------------------
+
+To create alternative bitmap drawables for different densities, you should follow the 3:4:6:8:12:16 scaling ratio between the six generalized densities. 
+
+For example, if you have a bitmap drawable that's 48x48 pixels for medium-density screens it will be 96x96 (2.0x) for extra-high-density. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

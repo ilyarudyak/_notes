@@ -1,0 +1,43 @@
+floating action button (FAB)
+------------------------------
+
+  - vibrant color, above the rest of the content (always accessible - communicates its importance), a way of promoting a prominent action, can respond to changes in UI (scrolling etc.); 
+
+  - have standard sizes (40dp or 56dp) and elevation (6dp, raised to 12dp when pressed);
+
+  - positioned when two surfaces meet or anchored in a corner; single FAB per screen;
+
+  - how to create it?
+
+    in lectures provided a lot of details but in fact we can just use library; add appcompat and design; 
+
+    the only parameter we have to adjust - source for an image (plus or whatever we are going to use in a button); see here: http://stackoverflow.com/questions/26963219/how-to-create-a-floating-action-button-fab-in-android-using-appcompat-v21
+
+    how it's created in this library? well we use ImageButton and parameters above to create it;
+
+surface reaction on touch
+--------------------------
+
+  (1) ripple effect outwards when button is pressed (ink ripple - рябь); 
+
+  (2) a button is raised when clicked; other example of changes in elevation - when action bar is raised during scrolling (a seam - шов to step transition);
+
+  (3) interesting pattern for main/detail view when an item in list view tranforms into detail view; another example - animation on click item in a list;
+
+surface reaction on scrolling
+-------------------------------
+
+  - main examples here: collapsible toolbar and parallax effect;
+
+
+
+
+
+
+
+
+
+
+
+
+

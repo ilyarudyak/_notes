@@ -1,0 +1,21 @@
+Decorator
+-----------
+
+  - The Decorator Pattern attaches additional responsibilities to an object dynamically. Decorators provide a flexible  alternative to subclassing for extending functionality. p. 91
+
+  Decorator is an abstract class that extends Component abstract class. Concrete decorators extend this abstract class. They contain an instance of Component and add some functionaly to it.
+
+  - Examples: starbuzz, java I/O.
+
+  For example Milk (concrete Decorator) contains an instance of Beverage and alter both description and cost() method:
+
+    @Override
+    public String getDescription() {
+        return beverage.getDescription() + ", Milk";
+    }
+
+    @Override
+    public double cost() {
+        return beverage.cost() + .10;
+    }
+

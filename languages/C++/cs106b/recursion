@@ -1,0 +1,14 @@
+ why is backtracking?
+
+  - In some recursive functions, such as binary search or reversing a string, each recursive call makes just one recursive call. Now consider a recursive function such as subsets or permutation that makes not just one recursive call, but several.
+
+  - In some contexts, we have no choice but to exhaustively examine all possibilities, such as when trying to find some globally optimal result, But what if we are interested in finding any solution, whichever one that works out first?
+
+patterns:
+
+    1) in/out - find all subsets, combinations;
+    2) permutations;
+
+procedural vs. functionsl:
+
+  - return result or not (fractals);

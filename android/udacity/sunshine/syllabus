@@ -1,0 +1,59 @@
+lesson1 -DONE
+---------
+
+- create a project
+- launch on a device
+- user interface
+- intro to adapters
+
+lesson2 -DONE
+--------
+
+- async task and networking
+- logging
+- action bar menu
+- permissions -TODO
+- adapter
+- JSON parsing
+- screenshot
+
+lesson3 -IN_PROGRESS
+--------
+
+- list item listener
+- intents and details activity
+- settings
+- implicit and broadcast intents 
+  and intent filters
+- debugging breakpoints
+
+lesson5
+---------
+
+- intro to design
+- list item and adapter
+- view holder pattern
+- formatting strings
+- optimizing layouts
+- different screens
+- resourses
+- images
+- fragments
+- tablet layout*
+- handle rotation
+- redlines
+- action bar, settings bar
+- custom views -IGNORE
+
+lesson6 -DONE
+---------
+
+- services -TODO
+- alarms
+- syncadapter -IGNORE
+- notifications
+
+
+
+
+

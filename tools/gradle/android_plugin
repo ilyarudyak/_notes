@@ -1,0 +1,53 @@
+introduction
+--------------
+
+what is its full name?
+  - com.android.application;
+
+where to get documentation?
+  - on DAC site (including API and link to a detailed guide), 
+  no description in Gradle guide;
+
+why do we have two gradle.build files?
+  - one relates to the project and one to a module;
+
+ok, what is the difference between project and module?
+  - well, it seems a project can include: a) Android and/or 
+  Java library modules; b) App engine modules; c) Android 
+  application modules for different devices (watch, TV etc.);
+
+configuration
+---------------
+
+what are the main configuration options?
+
+  1) build variants:                android/buildTypes
+      debug/release, paid/free;
+  2) dependencies:                  dependencies
+      module, local and remote;
+  3) manifest entries;              android/defaultConfig                      
+  4) signing;
+  5) proguard;                      android/buildTypes/release
+  6) testing;
+
+why do we need to override manifest entries?
+
+what are necessary config options?
+  - only two: compileSdkVersion and buildToolsVersion;
+
+what are the standard build script (high level)?
+
+  android {
+      compileSdkVersion 22
+      buildToolsVersion "23.0.0 rc2"
+
+      defaultConfig { ... }
+      buildTypes { ... }
+  }
+
+  repositories { mavenCentral() }
+  dependencies { ... }
+
+
+
+ 

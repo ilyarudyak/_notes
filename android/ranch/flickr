@@ -1,0 +1,22 @@
+Key:
+266b66cddf50291d5fa78c4573877d3c
+
+Secret:
+0ec4bc4aaaf2addf 
+
+https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=266b66cddf50291d5fa78c4573877d3c&format=json&nojsoncallback=1&extras=url_s
+
+
+JSON 
+-----
+
+  - we use model class;
+  - JSON parser throws exception;
+  - we don't add items if no URL provided; but in other cases we don't care;
+
+  questions
+  -----------
+
+  - we can access only to immediate children? -YES, this is just a map of key/values;
+  - how to use GSON?
+  - what to do when no data exists?

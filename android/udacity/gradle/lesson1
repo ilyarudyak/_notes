@@ -1,0 +1,10 @@
+build tools
+--------------
+
+- The point is, is that the process of building Android[br]app is not something we can do by hand. It's not even something that[br]we can do in a shell script. We need a more robust solution.
+
+- Android has three different[br]types of resources that all get packaged differently. There's an additional wrinkle in that[br]the resources that you define need to be pooled together with resources[br]coming from your included libraries. And the identifiers of all those[br]resources need to be known beforehand, before anything else gets compiled. Also, Android apps most be[br]cryptographically signed.
+
+- Today, builds are responsible for[br]so much more. Because of this, the build has[br]become the software factory, in which we can continually change,[br]test, and release our apps. Think of Gradle as the one stop shop for[br]defining and integrating all the parts of[br]your software delivery process.
+
+- In fact, Android Studio[br]delegates the entire process of building Android Apps to Gradle. When I hit the run button, Android[br]Studio just sets Gradle in motion and sits back to watch.

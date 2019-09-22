@@ -1,0 +1,5 @@
+- An IntentService service pulls its commands off of a queue, as shown in Figure 26.1.
+
+- This does mean, however, that if you are doing networking in the background, you need to verify with the ConnectivityManager that the network is available.
+
+- To actually use your service in the background, you will need some way to make things happen when none of your activities are running. 

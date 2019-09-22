@@ -1,0 +1,38 @@
+intro
+------
+
+  - cmake_minimum_required(VERSION 3.5) - minimum required CMake version;
+  - project(MyProject) - directive which defines the name of the project;
+
+text variables
+---------------
+
+  - set (MY_VAR "hello") - to create a variable MY_VAR with the value "hello";
+  - set (OTHER_VAR "${MY_VAR} world!") - to refer to a variable later on;
+  - set (SOURCE_FILES foo.cpp bar.cpp baz.cpp) - by default, CLion will attempt to aggregate all project source files into a single variable;
+
+language standard
+-------------------
+
+  - CMAKE_<LANG>_FLAGS - to enable a particular language standard, C for C and CXX for C++; 
+
+      set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")  # enable C++11 standard 
+
+  - set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall") - additional compiler-related settings can be passed with the same command; to show all the compiler errors and warnings;
+
+add executable
+----------------
+
+  - add_executable (my_executable ${SOURCE_FILES}) - to create an executable binary; it is expected that the SOURCE_FILES variable contains all the necessary .cpp files required to construct the final executable;
+
+other sections
+---------------
+
+  - file reloading;
+  - specifying header search paths;
+  - compiler settings - if you’ve already got a suitable compiler installed, CLion will automatically detect it, and no further action is required.
+  - changing build directory;
+  - CLion’s configurations;
+  - including libraries;
+  - 
+

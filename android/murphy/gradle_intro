@@ -1,0 +1,46 @@
+- One of Groovy’s strengths is in creating a domain-speci8c language (or DSL). Gradle uses a domain-speci8c language (DSL) built on top of Groovy to accomplish these tasks.
+
+- To some extent, we get the best of both worlds: XML-style de8nitions (generally with less punctuation), yet with the ability to “reach into Groovy” and do custom scripting as needed.
+
+- Google has published the Gradle for Android plugin, which gives Gradle the ability to build Android projects. Google is also using Gradle and Gradle for Android as the build system behind Android Studio.
+
+- Originally, when we would build an app, those builds were done using Eclipse and Ant. Eclipse was the IDE, while Ant was the command-line tool. Eclipse does not use Ant for building Android projects, but rather has its own build system.
+
+manifest
+----------
+
+1) The package attribute will always need to be in the manifest, even for Android Studio projects. By default, the application ID is the package value, but Android Studio users can override it in their Gradle build files.
+
+2) Android Studio projects do not have a) minSdkVersion and b)targetSdkVersion properties. They are defined in the defaultConfig closure.
+
+    defaultConfig {
+        minSdkVersion 10
+        targetSdkVersion 20
+        ...
+    }
+
+3) Android Studio project, though, frequently  defines  a) versionName and b) versionCode properties in the defaultConfig closure.
+
+misc
+-----
+
+- You will always have at least two statements directly in the android closure: compileSdkVersion and buildToolsVersion.
+
+
+android plugin
+----------------
+
+- Probably the most common task that a developer will use, at least in the short term, is installDebug (or iD for short). This will build a debug version of the app and install it on an available device or emulator. 
+
+- If you just want to build the app, without installing it, assembleDebug (aD) or assembleRelease (aR) will accomplish that aim. If you want to uninstall the app from a device or emulator, uninstallDebug (uD) and uninstallRelease (uR) should work.
+
+- Just as there is installDebug, there can also be installRelease. The Debug and Release portions of the task are not hard-coded, but rather are derived from the “build types” de8ned in the build.gradle 8le.
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+what kind of buttons do we have?
+
+  a) floating button (plus in new inbox);
+  b) raised button (this is a standard button);
+  c) flat button (it seems this is a standard button with transparent background);
+
+where to use them?
+
+  - Use primarily one type of button per container. Only mix button types when you have a good reason to, such as emphasizing an important function.
+  - There should not be many layers of objects on the screen. Use flat buttons on dialogs to prevent too many layers of dimension. 
+  - Persistent footer buttons. If your app requires actions to be persistent and readily available to the user, consider using the floating action button. Alternatively, consider persistent footer buttons, which are also easily accessible. Never use raised buttons within persistent button areas.
+  - Raised buttons add dimension to mostly flat layouts. They emphasize functions on busy or wide spaces. Don’t use flat buttons in UIs where they would be difficult to see.
+
+
+other recommendations:
+  - Add padding around flat buttons so the user can easily find them.
+  - Minimum width: 88dp Height: 36dp 
+
+what attribute do we use for flat buttons?
+  - 

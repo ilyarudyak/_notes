@@ -1,0 +1,59 @@
+list page
+----------
+
+  (1) title: can we change font of an ActionBar title (instead of using separate text field)? how do we use image in sunshine? position title in the bottom. -DONE
+  (2) add snackbar; -DONE
+  (3) smth that i hide out in layout -DONE
+
+detail page
+-------------
+
+  (1) status bar
+  (2) color of link
+  (2a) get text color from image as well
+  (2b) margins???
+
+  additional:
+  (3) change layout completely
+  (4) parallax effect
+
+questions
+------------
+
+  (1) what this detail layout is about? look at io 2014 -DONE
+  (2) how can we check if we don't really save it menually?       
+
+      if (savedInstanceState == null) {
+          refresh();
+      }
+  (3) why do we use custom loader? it seems we just don't have any standard implementation for RecyclerView.
+  (4) do we need fab_state_list_anim.xml or design library does that for us?
+
+next
+-------
+
+  (1) motion effects
+  (2) tablet
+
+
+
+_id INTEGER PRIMARY KEY AUTOINCREMENT,server_id TEXT,title TEXT NOT NULL,author TEXT NOT NULL,body TEXT NOT NULL,thumb_url TEXT NOT NULL,photo_url TEXT NOT NULL,aspect_ratio REAL NOT NULL DEFAULT 1.5,published_date INTEGER NOT NULL DEFAULT 0
+
+SELECT _id, server_id, title, author, aspect_ratio, published_date FROM items;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

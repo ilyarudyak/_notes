@@ -1,0 +1,8 @@
+how to download image?
+
+  - create singleton of RequestQueue (code is very close to provided by google https://developer.android.com/training/volley/requestqueue.html); sometimes recommended to subclass application - google does not recommend this;
+
+  - we use setImageUrl() with 2 parameters: (a) url of an image; (b) ImageLoader to make this request;
+
+    ImageLoader imageLoader = ImageLoaderHelper.getInstance().getImageLoader();
+    imgNetWorkView.setImageUrl(Const.URL_IMAGE, imageLoader);

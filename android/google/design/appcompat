@@ -1,0 +1,44 @@
+intro
+-------
+
+in short AppCombat was the backport for ActionBar, starting with AppCompat v21 (October 2014) it's a backport for material design:
+
+- AppCompat (aka ActionBarCompat) started out as a backport of the Android 4.0 ActionBar API for devices running on Gingerbread;
+
+- AppCompat v21 delivers an API and feature-set that is up-to-date with Android 5.0: primarily toolbar, color palette, widget tinting; other features are in different libraries: RecyclerView, CardView and Palette libraries etc.
+
+- AppCompat v22 (April 2015). Change from ActionBarActivity to AppCompatActivity. Added support for consistent, material design dialogs via the AppCompatDialog class. Using android:theme attribute.
+
+why appcompat-7?
+------------------
+
+- it works with APIs 7+;
+
+toolbar
+---------
+
+it seems that we have new concept of *toolbar* - a) action bar is now called app bar and b) it's just a special kind of toolbar:
+
+- In this release, Android introduces a new Toolbar widget. This is a generalization of the Action Bar pattern that gives you much more control and flexibility. 
+
+- There are 2 ways to use toolbar:
+
+  (a) Use a Toolbar as an Action Bar when you want to use the existing Action Bar facilities (such as menu inflation and selection, ActionBarDrawerToggle, and so on) but want to have more control over its appearance.
+
+  (b) Use a standalone Toolbar when you want to use the pattern in your app for situations that an Action Bar would not support; for example, showing multiple toolbars on the screen, spanning only part of the width, and so on.
+
+search view
+-------------
+
+- AppCompat offers Lollipop’s updated SearchView API, which is far more customizable and styleable (queue the applause). We now use the Lollipop style structure instead of the old searchView* theme attributes.
+
+how to use
+-------------
+
+- use AppCompatActivity, Theme.AppCompat (with support of color palette) and MenuItemCompat; 
+
+
+
+
+
+

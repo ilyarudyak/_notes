@@ -1,0 +1,23 @@
+intro 
+------
+
+- Android Studio doesn't[br]even use an internal builder. Android Studio delegates its entire build process to Gradle.
+
+- Gradle itself doesn't inherently[br]know anything about Android. That capability's provided by Google in[br]the form of an Android Gradle plugin.
+
+- Android Studio is actually happy to[br]import and work with any Gradle project.
+
+- It maintains its own internal[br]model of your project, and when a project is loaded or[br]a Gradle build script changes, Android Studio needs to synchronize its[br]internal model with Gradle's model.
+
+android plugin
+----------------
+
+- we'll be covering six main themes: 
+
+  1) The first is *build variants*. It's often useful to build slightly[br]different versions of the same app, such as debug version for[br]testing and a release version for the Google Play store. Another common use case is a free[br]version and a paid version of your app.
+
+  2) Android plugin allows us to manage *dependencies* on a per variant basis.
+
+  3) Android plugin can override resources and *manifest* entries also[br]on a per variant basis. 
+
+  to be continued in lesson 4 (signing, proguard, testing) ...

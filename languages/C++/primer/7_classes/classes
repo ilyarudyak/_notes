@@ -1,0 +1,21 @@
+  - Although every member must be declared inside its class, we can define a member function’s body either inside or outside of the class body.
+
+  - this is a pointer, so we use:
+
+       this->bookNo;
+
+const member function
+-----------------------
+
+  - A const following the parameter list indicates that this is a pointer to const (and by default it is Sales_data *const, not const Sales_data *const).
+  - Member functions that use const in this way are const member functions. The fact that this is a pointer to const means that const member functions *cannot change* the object on which they are called. 
+
+------------------------
+
+  - The name of a member defined outside the class must include the name of the class of which it is a member:
+
+      double Sales_data::avg_price() const { ... }
+
+  Once the compiler sees the function name, the rest of the code is interpreted as being inside the scope of the class. Thus, when avg_price refers to revenue and units_sold, it is implicitly referring to the members of Sales_data.
+
+  - 

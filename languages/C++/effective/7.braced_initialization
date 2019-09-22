@@ -1,0 +1,44 @@
+  - {} is called universal because it can be used everywhere; 
+  including non-static members:
+
+    class Widget {
+      ...
+    private:
+      int x{ 0 }; // fine, x's default value is 0
+      int y = 0;  // also fine
+      int z(0);   // error!  
+    };
+
+  - three main differences from () initialization:
+
+    (a) can be used for container initialization with multiple values:
+
+      std::vector<int> v{ 1, 3, 5 }; // v's initial content is 1, 3, 5
+
+    (b) braced initialization prohibits implicit narrowing conversions
+    among built-in types;
+
+    (c)* braced initialization is immune to C++’s most vexing parse:
+
+      Widget w1(10); // call Widget ctor with argument 10
+      Widget w2();   // most vexing parse! declares a function 
+                     // named w2 that returns a Widget!
+
+  -problems. During constructor overload resolution, braced initializers 
+  are matched to std::initializer_list parameters if at all possible, 
+  even if other construc‐ tors offer seemingly better matches.
+
+    std::vector<int> v1(10, 20);  // use non-std::initializer_list 
+                                  // ctor: create 10-element
+                                  // std::vector, all elements have
+                                  // value of 20
+    std::vector<int> v2{10, 20};  // use std::initializer_list ctor: 
+                                  // create 2-element std::vector,
+                                  // element values are 10 and 20
+
+  - sidenote. The “confusing mess” lobby points out that the use 
+  of an equals sign for initialization often misleads C++ newbies 
+  into thinking that an assignment is taking place, even though it’s not.
+
+  - sidenote2. Most developers end up choosing one kind of delimiter 
+  as a default, using the other only when they have to. 

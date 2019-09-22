@@ -1,0 +1,24 @@
+  - why firebase? 
+
+    1) it seems we don't need to write server-side code with it;
+    2) it allows live updates of data including chat apps (due to push notification system);
+    3) hosted in the cloud;
+    4) flexible schema;
+
+  - what other options? Parse (no SQL, based on MongoDB);
+
+  - does it use SQL? 
+
+    No, it's based on JSON.
+
+  - when data are added, changed etc. we may see different colors; we may get an URL of individual field if we press it; 
+
+  - terminology: entrire JSON - database; key/value pair (aka node, object); analog of array in JSON - list, map, collection;
+
+  - instead of request/response model it uses push notification (and that provides support for live update and chat apps);
+
+  - how can we store data? 
+
+    we may use objects or maps (not recommended); when using objects there are some simple rules (including matching names of instance variables and children);
+
+    firebase use Jackson Object Mapping Library under the hood;

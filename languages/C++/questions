@@ -1,0 +1,15 @@
+
+  - default initialization;
+  - iterator vs. pointer;
+
+
+  classes
+  ---------
+
+    - default constructor - when its available and when not? only when we don't define any other constructors;
+
+    - default constructor - default keyword; it seems we explicitely call defauly constructor (it can be unavailable - see above);
+
+    - default initialization; it seems this is a complex topic in C++; default (or empty) construction does NOT initialize primitive types; but DOES initiale class types;
+
+    - explicit - no automatic conversion using constructor of a class (http://stackoverflow.com/questions/121162/what-does-the-explicit-keyword-in-c-mean);

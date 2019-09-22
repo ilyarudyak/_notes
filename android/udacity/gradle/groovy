@@ -1,0 +1,7 @@
+- optional parentheses; this feature is often used to create more natural-looking DSLs, a human-readable language understandable by domain experts;
+
+- strings: Double-quoted Strings in Groovy are more powerful than traditional Java Strings. They can interpolate embedded variables or expressions denoted by a dollar sign and curly braces. At runtime, the expression is evaluated and forms a String.
+
+- lists: Under the hood, Groovy creates an instance of java.util.ArrayList. Groovy also adds syntactic sugar to simplify the use of a List. A perfect example is the left shift operator (<<) that allows for adding a new element to the List. Under the hood, Groovy calls the method add. 
+
+- instance variables: Fields of a class (also called properties in Groovy) can be accessed by dot notation, which looks exactly as if they were public in Java. However, under the hood Groovy calls the auto-generated corresponding getter/setter method.

@@ -1,0 +1,78 @@
+what are we not going to check?
+--------------------------------
+
+  - preferences
+  - notification
+  - tablet
+
+questions
+-----------
+
+- when to start service; done
+
+- where to put RecyclerView setup; in onCreateView() except setAdapter() - this one goes into async task;
+
+- retention of fragments in view pager; it seems they are retained;
+
+
+http://finance.yahoo.com/rss/headline/?s=GOOG
+http://finance.yahoo.com/rss/headline?s=yhoo
+
+04-05 22:30:16.516 10854-10854/com.ilyarudyak.android.portfel E/MessageQueue-JNI: java.lang.NullPointerException: Attempt to invoke virtual method 'boolean android.support.v7.widget.RecyclerView$LayoutManager.canScrollVertically()' on a null object reference
+
+what do we have to check?
+-------------------------
+
+  - add/delete done
+  - google services (1)
+  - release done
+
+potential bugs
+---------------
+
+  - array out of bound on market fragment MUST (may be also check how we implemented RV with multiple list items) (2)
+  - rotation done
+  - webkit with 2 screens done
+
+  https://www.yahoo.com/news/san-francisco-tries-life-affordable-060337975.html
+  http://news.yahoo.com/san-francisco-tries-life-affordable-060337975.html
+
+
+more features
+---------------
+
+  - widget customization
+  - scroll out round button
+  - status bar - scrolling and invisible
+  - add only stocks
+  - charts, gridlines
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

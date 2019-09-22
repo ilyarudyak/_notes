@@ -1,0 +1,12 @@
+- There's a lot to learn with making background transactions efficient. But the good news is that Android gives you the Sync Manager framework that implements many of these best practices.
+
+- It allows Android applications to leverage the same basic framework that Google apps use for efficient synchronization.
+
+- Ultimately, it's a centralized place to put all of the device data transfers in one place. So that they all be scheduled intelligently by the OS. In other words, that's one big cookie.
+
+functions
+-----------
+
+- The Sync Manager batches and time shifts these requests when possible to allow your data transfers to be scheduled with transfers from other apps. 
+
+- The Synch Manager also takes care of things like checking for network connectivity before initiating transfers.

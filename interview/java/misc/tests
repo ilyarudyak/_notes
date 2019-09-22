@@ -1,0 +1,15 @@
+What is a unit test?
+
+  - see this post: http://stackoverflow.com/questions/1383/what-is-unit-testing
+
+What is JUnit?
+
+  - JUnit is a popular unit testing framework that includes a rich API for assertions as well as support for test fixtures.
+
+What are text fixtures?
+
+  - A test fixture is a fixed state of objects used as a baseline for running tests. For example, a test fixture could drop and recreate an in-memory database to allow data access tests to work on a clean set of data after every test execution.
+   
+What are mock objects?
+
+  - see here: http://stackoverflow.com/questions/346372/whats-the-difference-between-faking-mocking-and-stubbing

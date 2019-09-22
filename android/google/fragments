@@ -1,0 +1,84 @@
+how to create a fragment (without creating an activity)?
+  - use menu New->Fragment; it creates two files: a) java class (subclass of fragment); b) xml layout;
+
+what is tools:context?
+  - basically nothing; see here for details: http://tools.android.com/tech-docs/tools-attributes;
+
+how to create a static fragment?
+  - a) add fragment element to activity layout with name of a fragment; b) add fragment id; c) add specific h/w parameters;
+
+how to create a dynamic fragment?
+  - a) create a container for a fragment in activity layout (for example, frame layout); b) execute a transaction to put in this container newly created instance of a fragment;
+
+
+training
+----------
+
+1) organize 2-pain layout:
+
+  - phone: a) we use frame layout (with id fragment_container); b) we than check if it's not null using findViewById(R.id.fragment_container); c) we than put a fragment into it dynamically; d) after click we will replace it for another fragment;
+  - tablet: we use static fragments (2 fragment elements in layout);
+
+2) organize communications between fragments:
+
+  - it seems we have to use an interface approach defined in 
+
+questions
+-----------
+
+why do we use an empty constructor for a fragment?
+  - we forced to use - when android recreates a fragment it calls empty constructor; so in case we have a constructor with parameters they will be lost; that's a gotcha of fragments;
+  - we have to workarounds: a) use static factory; b) use getters and setters setArguments() and getArguments();
+
+how to send arguments to a fragment?
+  - we don't really send arguments to a fragment; rather we create it (see the question above);
+
+why do we check args in onCreate()?
+  - they say (in comments) that layout is already created and we can change it based on provided args; 
+  - in other cases we can check args in onCreateView();
+
+what approach to communicate with activity is used in sunshine?
+  - it seems they use interface callbacks and factory methods;
+
+what approach to use in popmovies?
+  - we have to use large layout with: a) static poster fragment and b) dynamic detail fragment; why not 2 static fragments? we have to create detail fragment with parameters at run-time;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

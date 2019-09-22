@@ -1,0 +1,79 @@
+from here: http://developer.android.com/training/transitions/index.html
+
+how to create a scene?
+
+  (1) in our example we have FrameLayout with id="scene_root" and we include insife of it layouts for scenes:
+
+    <FrameLayout ... >
+      <include layout="@layout/scene1"/>
+
+      here: scene1 - our base scene with 3 figures in line;
+            scene2 - next scene with figures in corners without text;
+            scene3 - with text
+            scene4 - we don't have layout for this;
+
+  (2) standard way to create scene - use getSceneForLayout():
+
+    mScene2 = Scene.getSceneForLayout(mSceneRoot, R.layout.scene2, getActivity());
+
+      here mSceneRoot is inflated from FrameLayout - see above; 
+      but we also can use a constructor (here container is a RelativeLayout that contains everything else in scene 1 and other scenes as well):
+
+    mScene1 = new Scene(mSceneRoot, (ViewGroup) mSceneRoot.findViewById(R.id.container));
+
+can we do transition without using scenes?
+
+  - we can. 
+
+how to create transition?
+
+  (1) from xml. see example in sample app. this is kind of cryptic and not explained in the training description (and this is actually a set of transitions). we can also can create Transition manager in xml that uses this transition.
+
+  (2) in java. like this Transition mFadeTransition = new Fade();
+
+how to make a transition?
+
+  - we use TransitionManager like this:
+
+    TransitionManager.go(mScene2); // here we use standard AutoTransition
+    TransitionManager.go(mEndingScene, mFadeTransition);
+
+  - we can do transition without new scene:
+
+    TransitionManager.beginDelayedTransition(mSceneRoot);
+    // change view here (in the sample app we increase size of a square)
+
+
+from here: https://www.bignerdranch.com/blog/building-animations-android-transition-framework-part-1/
+
+  (1) button goes down;
+  (2) add a new view in the middle;
+  (3) change size of a button;
+  (4) change a button to a picture;
+  (5) refactor transition to a separate method and simulate AutoTransition;
+  (6) control duration;
+  (7) add interpolator; One of the principles of classical animation states that characters cannot simply start moving. They have to show anticipation, then perform the movement and finally overshoot before coming to a stop. Using a built-in AnticipateOvershootInterpolator, we can achieve the desired effect.
+
+  what else can we do?
+
+  (9) define a button listener in the second scene;
+  (10) use xml to define transitions and transition managers;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

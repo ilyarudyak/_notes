@@ -1,0 +1,23 @@
+how to use preferences?
+
+  1) define preferences in xml;
+  2) create fragment extends PreferenceFragment;
+  3) get preferences when needed using key and preference object; 
+
+where preferences stored?
+  - in a special file as a key/value pair;
+
+how to set default values?
+  - it seems we need both xml and java code; but in Sunshine we have only xml code?
+
+preference activity
+---------------------
+
+  - i know - this is deprecated; we have some boilerplate code and then we use two strange methods: addPreferencesFromResource() and bindPreferenceSummaryToValue(); 
+
+preference changes
+--------------------
+
+  - implement SharedPreference.OnSharedPreferenceChangeListener and callback onSharedPreferenceChanged(); in our case we notify syncadapter or content provider in this method;
+
+  - register and unregister listener in onResume() and onPause() respectively; why should we unregister listener?

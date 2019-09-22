@@ -1,0 +1,120 @@
+/* from here: https://en.wikipedia.org/wiki/Java_version_history#Java_5_updates */
+
+ main features:
+ -----------------
+
+    (1) generic types
+    (2) enhanced for loop
+
+  intro
+  --------
+  Beginning with JDK 5, a second form of for was defined that implements a 
+  “for-each” style loop. 
+
+  As you may know, contemporary language theory has 
+  embraced the for-each concept, and it has become a standard feature that 
+  programmers have come to expect. 
+
+  Unlike some languages, such 
+  as C#, that implement a for-each loop by using the keyword foreach, 
+  Java adds the for-each capability by enhancing the for statement. 
+  The advantage of this approach is that no new keyword is required, 
+  and no preexisting code is broken. 
+
+  The for-each style of for is also referred to as the enhanced for loop.
+
+  motivation
+  ------------
+  The for-each style for automates the preceding loop. Specifically, it 
+  eliminates the need to establish a loop counter, specify a starting 
+  and ending value, and manually index the array. Instead, it automatically 
+  cycles through the entire array, obtaining one element at a time, in
+  sequence, from beginning to end. 
+
+  read-only
+  -----------
+
+  There is one important point to understand about the for-each style loop. 
+  Its iteration variable is “read-only” as it relates to the underlying array. 
+  An assignment to the iteration variable has no effect on the underlying array. 
+  In other words, you can’t change the contents of the array by assigning 
+  the iteration variable a new value. */
+
+    int nums[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    int sum = 0;
+
+    // use for-each style for to display and sum the values
+    for(int x : nums) {
+            System.out.println("Value is: " + x);
+            sum += x; 
+    }
+
+  
+
+  /* (3) static import */
+
+  /* (4) varargs 
+
+    Beginning with JDK 5, Java has included a feature that simplifies
+    the creation of methods that need to take a variable number of 
+    arguments. This feature is called varargs and it is short for 
+    variable-length arguments. A method that takes a variable number 
+    of arguments is called a variable-arity method, or simply a varargs 
+    method.
+
+    Prior to JDK 5, variable-length arguments could be handled two ways, 
+    neither of which was particularly pleasing. First, if the maximum 
+    number of arguments was small and known, then you could create 
+    overloaded versions of the method, one for each way the method could 
+    be called. Although this works and is suitable for some cases, it 
+    applies to only a narrow class of situations.
+
+    In cases where the maximum number of potential arguments was larger, 
+    or unknowable, a second approach was used in which the arguments were 
+    put into an array, and then the array was passed to the method. */
+
+    public static void vaTestOldNew(int ... v) {
+        System.out.println("Number of args: " + v.length +
+                " Contents: " + Arrays.toString(v));
+
+    }
+
+    int v[] = {1, 2, 3};
+    vaTestOldNew(v); // we still can pass an array
+    vaTestOldNew(1, 2, 3); 
+
+other features:
+------------------
+  (5) annotations (metadata)
+  (6) enumerated types
+
+    - This technique, known as the int enum pattern, has many shortcomings. It provides nothing in the way of type safety and little in the way of convenience. 
+
+    - The compiler won’t complain if you pass an apple to a method that expects an orange, compare apples to oranges with the == operator, or worse.
+
+    - Note that the name of each apple constant is prefixed with APPLE_ and the name of each orange constant is prefixed with ORANGE_. This is because Java doesn’t provide namespaces for int enum groups. Prefixes prevent name clashes when two int enum groups have identically named constants.
+
+    - Programs that use the int enum pattern are brittle. Because int enums are compile-time constants, they are compiled into the clients that use them. If the int associated with an enum constant is changed, its clients must be recompiled. If they aren’t, they will still run, but their behavior will be undefined.
+
+    - There is no easy way to translate int enum constants into printable strings. If you print such a constant or display it from a debugger, all you see is a number, which isn’t very helpful. There is no reliable way to iterate over all the int enum constants in a group, or even to obtain the size of an int enum group.
+
+    - You may encounter a variant of this pattern in which String constants are used in place of int constants. This variant, known as the String enum pattern, is even less desirable. While it does provide printable strings for its constants, it can lead to performance problems because it relies on string comparisons. Worse, it can lead naive users to hard-code string constants into client code instead of using field names. If such a hard-coded string constant contains a typographical error, it will escape detection at compile time and result in bugs at runtime.
+
+  (7) autoboxing and auto-unboxing of primitive types
+
+/* advanced features
+  (8) formatted I/O
+  (9) concurrency utilities *?
+
+
+
+
+
+
+
+
+
+
+
+
+

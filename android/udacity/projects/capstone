@@ -1,0 +1,40 @@
+deadlines: min 10 max 16
+
+what can be included:
+
+  - notifications: on lock screen and heads-up (new in Lollipop);
+  - JobScheduler;
+  - dialogs? (AppCompat has support for them);
+  - gridlayout; -DONE
+
+steps:
+
+  (1) frontend 1: tabs, FAB to add stocks;
+  (2) ui 1: index, detail screen, news by companies;
+  (3) libs: add index to yahoofinance, plot lib?
+  (4) features: detail screen for stock, browser inside app, plots, news by companies, portfolio perfomance, search, FAB to add stocks to portfolio and market, notifications?, preferences?, sharing?;
+  (5) backend: store stocks in portfolio and market; service with JobScheduler;
+  (6) frontend 2: tollbars, scrolling, animation, navigation;
+
+
+additional functionality:
+
+  - add arbitrary rss feed;
+
+what have i studied for capstone:
+
+  - xmlpullparser;
+  - recycler view with different items;
+  - 3 libs: rss parser, yahoo finance api, charts;
+  - gridlayout;
+
+what i'm going to study:
+
+  - animation; Tue
+  - content providers; Thu-Fri
+  - job scheduler; Wed
+  - recycler view; Wed
+  - web view; -DONE
+  - gradle? 
+  - design library
+

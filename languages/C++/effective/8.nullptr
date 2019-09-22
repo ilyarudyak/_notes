@@ -1,0 +1,28 @@
+  - C++’s primary policy is that 0 is an int, not a pointer. And if 
+  it can not interpret 0 as an int - it will be null pointer. NULL 
+  can be interpreted as an int or long depending on implementation.
+
+  - So the first problem that nullptr solves - correct behavior in 
+  case of overloading:
+
+    void f(int);    // three overloads of f
+    void f(bool);
+    void f(void*);
+
+    f(0);           // calls f(int), not f(void*)
+    f(NULL);        // might not compile, but typically calls
+                    // f(int). Never calls f(void*)
+    f(nullptr);     // calls f(void*) overload  
+
+  But still - avoid overloading on integral and pointer types. Some 
+  engineers can continue using 0 and NULL.
+
+  - The second problem - it can also improve code clarity, especially 
+  when auto variables are involved:
+
+    auto result = findRecord( /* arguments */ ); 
+    if (result == 0) { ... }
+
+  - there are also some advantages in templated code (advanced).
+
+

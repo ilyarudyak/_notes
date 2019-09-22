@@ -1,0 +1,76 @@
+sessions 23-24 basics
+----------------------
+
+  - basics: a member function, no return type, same name as that of class (i.e. V3), optional input parameters, public; constructor overloading; can have default parameters;
+
+  - usage (very different from java):
+
+      V3 a; V3 b(0, 0, 0);                          // create on stack
+      V3* ap = new V3; V3* bp = new V3(0, 0, 0);    // create on heap
+      b = a.sum( V3(2, 2, 2) );                     // call constructor explicitely
+
+  - initialization list:
+
+      V3(double vx, double vy, double vz) : x(vx), y(vy), z(vz) { ... }
+
+  - destructor - no parameters, always called automatically (no explicit calls); 
+
+session 25 default and copy constructors
+------------------------------------------
+
+  - compiler provides default constructor only if we don't define *any* constructor; so if we define some - it's better to define default constructor (by the way - default constructor is used when we're creating an array); 
+
+  - copy constructor is used when (no copy constructor in assignment b = a (???)):
+
+    (a)   V3 b = a;     // initialization in declaration
+    (b-c) b = fun(a);   // pass by value in function; return from function
+
+  - again if no copy constructor is specified compiler will provide a default one; sometimes it's not good enough (it seems pointers are copied by value, no deep copy (???));  
+
+sessions 26-27 operator overloading
+-------------------------------------
+
+  - x + y is equivalent to x.operator+(y);
+
+  - we have 2 technics for overloading: (a) as a member function or (b) non-member function;
+
+    V3 operator+ (const V3 &b) const {          // here const means that we don't change this
+      return V3(x + b.x, y + b.y, z + b.z);
+    }
+
+  - we may also define = operator (again - it's probably a problem with pointers here (???));
+
+session 27 riends and static members
+--------------------------------------
+
+  - if function is not a member function it has no access to private members; sometimes this is what we need; we may declare this function as a friend and it gains this access (doesn't matter in what section - public or private):
+
+    friend bool collinear(...);
+
+  - classes can also be declared as friend to gain access to private members;
+
+  - static members are shared between all objects (classical example - count number of created objects); to access a static member: Point::count; we may also create static methods (???);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

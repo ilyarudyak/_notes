@@ -1,0 +1,47 @@
+jdbc
+
+  - Java Database Integration with JDBC Lynda
+
+swing
+
+  - Learning Swing GUI Programming O'Reilly (not yet available)
+  - Java Swing (GUI) Programming: From Beginner to Expert John Purcell
+
+servlets
+
+  - Beginning Java Web Development O'Reilly
+  - Learning Java EE 7 Infinite Skills
+  - Java EE Essentials: Servlets and JavaServer Faces O'Reilly
+
+  -> Learning path
+
+java 8
+
+  - Java 8 Lambdas and Streams O'Reilly
+  - Java SE 8 New Features Lynda
+
+design patterns
+
+  - Design Patterns in Java O'Reilly
+  - Foundations of Programming: Design Patterns Lynda
+
+multithreading
+
+  - Concurrent and Parallel Programming Concepts O'Reilly
+
+general 
+
+  - Java 8 - Beyond the Basics Infinite Skills
+  - Java Advanced Training Lynda
+
+testing, debugging and building
+
+  - Java Testing for Developers O'Reilly
+  - Debugging Java and Scala O'Reilly
+  - Learning Apache Maven O'Reilly
+
+groovy
+
+  - Groovy Programming Fundamentals O'Reilly
+
+  -> Learning path

@@ -1,0 +1,59 @@
+intro
+------
+
+  - C++ programmers tend to refer to variables as "variables" or "objects" interchangeably.
+
+  - In this book, we’ll follow the more general usage that an object is a *region of memory that has a type*. We will freely use the term object regardless of: (a) whether the object has built-in or class type, (b) is named or unnamed, (c) or can be read or written.
+
+  - what is the difference between declaration, definition and initialization? 
+
+    (a) the first 2 terms are usually the same (and it seems declaration is more common) but different in C++; this is relates to multiple files compilation; main functions of declarations and definitions: provide type, name, allocate storage and provide initial value;
+
+    (b) initialization - a variable given an initial value *when it is defined*. again usually initialization and assignment are the same but different in C++. initialization is a complex topic in C++.
+
+initialization
+----------------
+
+  - what forms of initialization do we have in C++? it seems we have 3 options:
+
+    (a) using "=":    int units_sold = 0; 
+    (b) using "()":   int units_sold(0);
+    (c) using "{}":   int units_sold = {0}; 
+                      int units_sold{0};
+
+  - what is list initialization and its difference? this is using {} that is a new feature of C11; it seems we don't have a standard in other languages initialization before C11:
+
+    vector<T> v = {1, 2, 3, 4, 5};
+
+    When used with variables of built-in type, this form of initialization has one important property: The compiler will not let us list initialize variables of built-in type if the initializer might lead to the loss of information.
+
+  - what is default initialization? 
+
+    When we define a variable without an initializer, the variable is default initialized. Such variables are given the “default” value. What that default value is depends on the type of the variable and may also depend on where the variable is defined.
+
+    (a) build-in types. it seems they are NOT initialized (of course with some exceptions - static variables initialized). this includes both local and instance variables.
+
+    We recommend initializing every object of built-in type. It is not always necessary, but it is easier and safer to provide an initializer until you can be certain it is safe to omit the initializer.
+
+    (b) class types. classes controls how variables default initialized. for example string will be empty.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+1) what are evaluated to true and false? ok 
+2) load, require, include ok
+3) how to open a class? ok 
+4) default, optional and variable arguments - see /Users/IRudyak/mycodelink/well_ground/vararg.rb ok
+5) dup, clone and freeze ok
+6) 
+
+
+
+
+
+
+
+1) Ruby has a simple definition of truth. Any value that is not nil or the constant false is true — "cat", 99, 0, and :a_song are all considered true. - see pickaxe, p. 132.
+
+2) load, require, include - see lynda ruby
+
+load: loads a source file every time it is called
+require: loads a source file *only once*
+
+include: includes modules, *nothing* to do with files  
+
+3) classes are always open (see learning ruby, p. 126):
+
+You can open the Array class and add a method to it such as array_of_ten, as shown in Example 9-2. This feature makes the language incredibly flexible.
+
+Class Array
+  def array_of_ten
+    (1..10).to_a
+  end
+end
+
+5) dup, clone and freeze
+
+To complete the picture, there’s also a method called clone. It’s a lot like dup. The dif- ference is that if you clone a frozen object, the clone is also frozen—whereas if you dup a frozen object, the duplicate isn’t frozen.
+
+Some dangers still lurk, though. Even if you freeze an array, it’s still possible to change the objects inside the array (assuming they’re not frozen). well-grounded, p. 57
+
+
+

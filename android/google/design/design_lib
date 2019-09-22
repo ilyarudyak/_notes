@@ -1,0 +1,71 @@
+what functionality do we have in this lib?
+
+  - i'd say this is like Bootstrap for web: most of the work is done in xml;
+
+  views:
+    - navigation view (for navigation drawer);
+    - floating labels;
+    - FAB;
+    - Snackbar;
+    - Tabs;
+
+  motion:  
+    - CoordinatorLayout - introduced in this library and help us deal with motion:
+
+      (a) It works with FAB: snackbars; new attributes - layout_anchor attribute and layout_anchorGravity;
+      (b) It also works with app bars and toolsbars (collapsible and );
+
+
+LabDesignLibrary - http://inthecheesefactory.com/blog/android-design-support-library-codelab/en
+-----------------
+
+
+  (8) how to add tabs:
+
+    - xml: add <...TabLayout> into <...AppBarLayout>;
+    - java: find tabLayout by id and use newTab() and addTab() methods;
+
+  (9) toolbar - exit screen with content:
+
+    - xml: we have to wrap our content (buttons in our case) into NestedScrollView (ScrollView doesn't work with CoordinatorLayout);
+    
+    - xml: add flag to Toolbar
+
+      app:layout_scrollFlags="scroll|enterAlways" 
+
+  (10) just comment tabs;
+
+  (11) toolbar - collapsable toolbar:
+
+    - xml: use CollapsingToolbarLayout as a wrapper for toolbar inside AppBardLayout; change AppBarlayout height;
+
+    - xml: remove flags from toolbar and set flags in CollapsingToolbarLayout
+
+      app:layout_scrollFlags="scroll|exitUntilCollapsed"
+
+    - xml: add new mode to toolbar
+
+      app:layout_collapseMode="pin"
+
+  ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

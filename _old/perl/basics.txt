@@ -1,0 +1,31 @@
+scalars
+---------
+
+1) "": a) we can use \n etc. b) we have variable interpolation ($today = "Monday"; print "today is $today"; # prints today is Monday); '': only \ and ' are special;
+
+    -> use print $today; (not print "$today");
+
+2) . - concatenation (not +);
+3) automatic conversion based on operator: + to number and . to string; so "a" . 35 gives "a35"; "1" + "2" gives "3"; ("a" + "b" gives 0); 
+
+    -> so perl has separate pool of string comparison operators;
+
+4) you can use comma in print: print "The answer is ", 6 * 7, ".\n";
+5) scalar variable preceded by $;
+6) Perl doesn’t have a separate Boolean datatype; a) 0 means false; all other numbers mean true; empty string ('') means false as well;
+7) general rule in Perl: except in cases where it changes the meaning to remove them, parentheses are always optional.
+
+8) standard use of chomp - chomp($text = <STDIN>);
+
+9) there is undef value; if we use uninitialized variable it has 0 value (or "" if it's a string); so it's possible to use uninit. accumulators etc.
+
+    # Add up some odd numbers $n = 1;
+    while ($n < 10) {
+        $sum += $n;
+        $n += 2; # On to the next odd number 
+    }
+    print "The total was $sum.\n";
+
+lists and arays
+-----------------
+ 

@@ -1,0 +1,30 @@
+(1) simple example
+(2) dividers
+(3) listeners
+(4) cursors
+(5) grids: (a) simple grid; (b) staggered grid;  
+(6) advanced: (a) different items; (b) mutable items; (c) changing items; (d) sorted list; (e) libraries;
+
+
+dividers
+----------
+
+- we can use cards or
+
+- add dividers manually via ItemDecoration;
+
+grids
+-------
+
+- in simple case we just switch to grid or staggered grid layout; the difference - in grid layout cards will be the same (in a row?);
+
+- we may control number of columns via <integer> parameter in xml file; so we can have different columns for a phone or a tablet;
+
+
+tomorrow:
+
+  - simple example compare with XYZ;
+  - listeners, cursors;
+  - podcast;
+  - codepath;
+  - google guide; 

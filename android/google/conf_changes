@@ -1,0 +1,17 @@
+what is configuration change?
+  - usually this is just screen rotation; other cases are rare (for example, keyboard availability, and language);
+
+what do android do with activity after configuration change?
+  - it destroys an activity; why? it seems it has to render a view in a different way (for example get new layout for landscape);
+
+what is the difference between activity and fragment?
+  - by default android destroys fragments as well; but we have an option to *retain* it;
+
+why do we check for fragment != null in onCreate()?
+  - when activity is recreated it uses existing fragment to recreate (not retain) fragment; by executing transaction we create second instance manually; of course situation is the same if we retain fragment;
+
+how can we retain a fragment?
+
+  - Here, “retain” means that Android will keep the same fragment instance across the con8guration change, detaching it from the original hosting activity and attaching it to a new hosting activity. Since it is the same fragment instance, anything contained inside that instance is itself retained and, therefore, is not lost when the activity is destroyed and recreated.
+  - we simply use setRetainInstance(true) in onCreateView();
+  - Note that setRetainInstance() only works with dynamic fragments, not static fragments. Static fragments are always recreated when the activity is itself destroyed and recreated. 

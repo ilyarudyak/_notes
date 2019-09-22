@@ -1,0 +1,15 @@
+installed macports (here's what I install manually):
+
+    common:
+    -------
+    
+    - bash, bash-completion, colordiff;
+    - git;
+    - python27, python37 (pip installed as a dependence);
+    - tree, unrar;
+
+
+    for specific task:
+    -------------------
+    - tk (GUI for cs188);
+    

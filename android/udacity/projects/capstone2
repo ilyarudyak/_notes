@@ -1,0 +1,41 @@
+problems
+----------
+
+- transparent status bar;
+- refreshing (including news fragment);
+- hide FAB when scrolling;
+- hiding of last item;
+- add indices, not only stocks; -DON'T DO
+
+to do
+-------
+
+- delete using long-press; -DONE
+- detail activity for indices; -DONE
+- separate field for indices in DB; -DON'T DO
+- add settings for freq of service update; -DONE
+- portfolio fragment; -DONE
+
+from rubric
+--------------
+
+- ShareActionProvider; -DONE
+- notifications; -DONE
+- Google services; (1) -IN PROGRESS
+- widget; -DONE
+- content descriptions & RTL*; -DONE
+- at least one alternate mock for tablet; (2)
+
+- shared element transitions; -DON'T DO
+- standard and simple transitions between activities? -DON'T DO
+
+- self-evaluation; -DONE
+
+*) Label your ImageButton, ImageView, EditText, CheckBox and other user interface controls using the android:contentDescription attribute.
+
+passwords
+-----------
+
+FuW46yhKfHXD
+UjjnMpjmEFyt
+

@@ -1,0 +1,5 @@
+- ContentProviderOperation - Represents a single operation to be performed as part of a batch of operations.
+
+- ContentProviderResult - Contains the result of the application of a ContentProviderOperation. It is guaranteed to have exactly one of uri or count set.
+
+- 

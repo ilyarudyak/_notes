@@ -1,0 +1,8 @@
+intro
+-------
+
+- idea is the same as with RecycleView - much more flexible approach but we also have to do more; 
+
+- Toolbar is an *ordinary ViewGroup*. While it does not support placing arbitrary children in it the way a LinearLayout might, it otherwise can be used like any other ViewGroup. In particular, you can put it in a layout resource and *position it wherever* it makes sense.
+
+- In particular, it does not set the background color to be the primary color of a Theme.Material theme, the way the action bar does.

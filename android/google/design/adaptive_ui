@@ -1,0 +1,10 @@
+Patterns 
+-----------
+
+  (1) Reveal - elements such as a side nav may become visible (kind of two-pane layout).
+  (2) Transform - side navigation may transform into tabs.
+  (3) Divide - this is the new version of reveal, when we use a dialog to show detail screen.
+  (4) Reflow - instead of 1 column of cards 3 or 4;
+  (5) Expand - this is just margin;
+
+  - it seems (2) is not mentioned in the class.

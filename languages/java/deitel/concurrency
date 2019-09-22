@@ -1,0 +1,73 @@
+- The vast majority of programmers should use existing collection classes and interfaces from the concurrency APIs that manage synchronization for you—such as the ArrayBlockingQueue class (an implementation of interface BlockingQueue) we discuss in Section 23.6.
+
+- For advanced programmers who want to control synchronization, use the synchronized keyword and Object methods wait, notify and notifyAll, which we discuss in the optional Section 23.7.
+
+23.3 executor
+----------------
+
+  why to use pool:
+
+    - Using an Executor has many advantages over creating threads yourself. Executors can reuse existing threads to eliminate the overhead of creating a new thread for each task and can improve performance by optimizing the number of threads to ensure that the processor stays busy, without creating so many threads that the application runs out of resources.
+
+    - Though it’s possible to create threads explicitly, it’s recommended that you use the Executor interface to manage the execution of Runnable objects.
+
+  wait for other threads to finish:
+
+    - After scheduling tasks to execute, you’ll typically want to wait for the tasks to complete—for example, so that you can use the tasks’ results. After calling method shutdown, you can call ExecutorService method awaitTermination to wait for scheduled tasks to complete. We demonstrate this in Fig. 23.7. We purposely did not call awaitTermination in Fig. 23.4 to demonstrate that a program can continue executing after the main thread terminates.
+
+  order of execution:
+
+    - This illustrates the fact that we cannot predict the order in which the tasks will start executing, even if we know the order in which they were created and started.
+
+23.4 thread synchronization
+-----------------------------
+
+  - When multiple threads share an object and it’s modified by one or more of them, indeter- minate results may occur (as we’ll see in the examples) unless access to the shared object is managed properly. If one thread is in the process of updating a shared object and another thread also tries to update it, it’s uncertain which thread’s update takes effect.
+
+  - The problem can be solved by giving only one thread at a time exclusive access to code that accesses the shared object. During that time, other threads desiring to access the object are kept waiting. When the thread with exclusive access finishes accessing the object, one of the waiting threads is allowed to proceed. 
+
+  Immutable data
+
+    - Actually, thread synchronization is necessary only for shared mutable data, i.e., data that may change during its lifetime. With shared immutable data that will not change, it’s not possible for a thread to see old or incorrect values as a result of another thread’s manipulation of that data. See details of using final keyword in the book.
+
+  Monitors
+
+    - A common way to perform synchronization is to use Java’s built-in monitors. Every object has a monitor and a monitor lock (or intrinsic lock). The monitor ensures that its object’s monitor lock is held by a maximum of only one thread at any time. 
+
+    - Other threads attempting to perform an operation that re- quires the same lock will be blocked until the first thread releases the lock, at which point the blocked threads may attempt to acquire the lock and proceed with the operation.
+
+  Testing
+
+    - One of the challenges of multi- threaded programming is spotting the errors—they may occur so infrequently and unpredictably that a broken program does not produce incorrect results during testing, creating the illusion that the program is correct. This is all the more reason to use predefined collections that handle the synchronization for you.
+
+  Synchronized keyword
+
+    - The problem lies in method add, which stores the value of writeIndex, places a new value in that element, then increments writeIndex. Such a method would present no problem in a single-threaded program. However, if one thread obtains the value of writeIndex, there’s no guarantee that another thread cannot come along and increment writeIndex before the first thread has had a chance to place a value in the array. 
+
+    - In other words, we want these three operations—storing writeIndex, writing to the array, incrementing writeIndex—to be an atomic operation, which cannot be divided into smaller subopera- tions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

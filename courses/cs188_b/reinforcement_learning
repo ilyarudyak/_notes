@@ -1,0 +1,46 @@
+intro
+-------
+
+  - how this relates to biology? Thus, animals seem to be hardwired to recognize pain and hunger as negative rewards and pleasure and food intake as positive rewards. Reinforcement has been carefully studied by animal psychologists for over 60 years.
+
+  - what is the main idea of RL? Whereas in Chapter 17 the agent has a complete model of the environment and knows the reward function, here we assume no prior knowledge of either. Imagine playing a new game whose rules you don’t know; after a hundred or so moves, your opponent announces, You lose. *This is reinforcement learning in a nutshell*.
+
+  - what is the difference between MDP and RL? Again we don't know the model (see above). For the most part, we will assume a fully observable environment, so that the current state is supplied by each percept. On the other hand, we will assume that the agent does not know how the en- vironment works or what its actions do, and we will allow for probabilistic action outcomes. Thus, the agent faces an unknown Markov decision process.
+
+  - types of agent (?):
+
+    (1) utility-based agent. knows P and learns R, U (traditional way)
+    (2) Q-learning agent. learns Q(s, a) instead of R, U.
+    (3) reflex agent. learns pi(s).
+
+  - types of learning: passive and active;
+
+  passive learning
+  ------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
